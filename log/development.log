@@ -1,0 +1,431 @@
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 02:56:23) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00481 (208 reqs/sec) | Rendering: 0.00357 (74%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 02:57:23) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00262 (381 reqs/sec) | Rendering: 0.00142 (54%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 128.30.52.49 at 2008-07-29 02:57:49) [GET]
+  Session ID: a10d12a241a072e3890e9904010ead1b
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00264 (379 reqs/sec) | Rendering: 0.00142 (53%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 128.30.52.36 at 2008-07-29 02:57:57) [GET]
+  Session ID: 70fc6a496007e540718c796d99cbc981
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00265 (377 reqs/sec) | Rendering: 0.00143 (54%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 128.30.52.36 at 2008-07-29 02:59:54) [GET]
+  Session ID: 6a951ee269204a907617a52ce8bf48bf
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00314 (318 reqs/sec) | Rendering: 0.00160 (50%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 02:59:59) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00298 (335 reqs/sec) | Rendering: 0.00148 (49%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:00:14) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00280 (356 reqs/sec) | Rendering: 0.00157 (56%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:00:38) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00264 (378 reqs/sec) | Rendering: 0.00144 (54%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:01:11) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00311 (321 reqs/sec) | Rendering: 0.00192 (61%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:01:28) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00273 (366 reqs/sec) | Rendering: 0.00154 (56%) | 200 OK [http://home.rajohns.com/]
+  [4;36;1mSQL (0.012753)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000534)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000575)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000622)[0m   [0;1mSHOW TABLES[0m
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:06:39) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00328 (304 reqs/sec) | Rendering: 0.00154 (47%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:08:07) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00307 (326 reqs/sec) | Rendering: 0.00169 (54%) | 200 OK [http://home.rajohns.com/]
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000640)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreatePlayers (1)
+  [4;35;1mSQL (0.031935)[0m   [0mCREATE TABLE players (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255) DEFAULT NULL, `last_name` varchar(255) DEFAULT NULL, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000457)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000699)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000811)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002121)[0m   [0mSHOW FIELDS FROM players[0m
+  [4;36;1mSQL (0.001870)[0m   [0;1mSHOW KEYS FROM players[0m
+  [4;36;1mPlayer Columns (0.001908)[0m   [0;1mSHOW FIELDS FROM players[0m
+  [4;35;1mSQL (0.000241)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.000586)[0m   [0;1mINSERT INTO players (`updated_at`, `first_name`, `last_name`, `created_at`) VALUES('2008-07-29 03:17:56', 'Ryan', 'Johns', '2008-07-29 03:17:56')[0m
+  [4;35;1mSQL (0.013318)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.011388)[0m   [0;1mCREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000524)[0m   [0mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000581)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreatePlayers (1)
+  [4;36;1mSQL (0.004326)[0m   [0;1mCREATE TABLE players (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255) DEFAULT NULL, `last_name` varchar(255) DEFAULT NULL, `admin` tinyint(1) DEFAULT 0, `created_at` datetime DEFAULT NULL, `updated_at` datetime DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000398)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000589)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000764)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.002074)[0m   [0;1mSHOW FIELDS FROM players[0m
+  [4;35;1mSQL (0.001993)[0m   [0mSHOW KEYS FROM players[0m
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:21:52) [GET]
+  Session ID: 9951c1d43b070fd83070e654cb530b74
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00320 (312 reqs/sec) | Rendering: 0.00193 (60%) | 200 OK [http://home.rajohns.com/]
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000647)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000480)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000722)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.002117)[0m   [0mSHOW FIELDS FROM players[0m
+  [4;36;1mSQL (0.001849)[0m   [0;1mSHOW KEYS FROM players[0m
+  [4;36;1mPlayer Load (0.001073)[0m   [0;1mSELECT * FROM players [0m
+  [4;35;1mPlayer Columns (0.002073)[0m   [0mSHOW FIELDS FROM players[0m
+  [4;36;1mSQL (0.000263)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.000513)[0m   [0mINSERT INTO players (`updated_at`, `admin`, `first_name`, `last_name`, `created_at`) VALUES('2008-07-29 03:27:12', 1, 'Ryan', 'Johns', '2008-07-29 03:27:12')[0m
+  [4;36;1mSQL (0.026793)[0m   [0;1mCOMMIT[0m
+  [4;35;1mPlayer Load (0.001155)[0m   [0mSELECT * FROM players [0m
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:29:07) [GET]
+  Session ID: c749235b7cb5d39add82668120ed21a1
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00264 (379 reqs/sec) | Rendering: 0.00143 (54%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:43:35) [GET]
+  Session ID: dad346dc5a8f09d45501725ea510c5b0
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00439 (227 reqs/sec) | Rendering: 0.00307 (69%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:45:37) [GET]
+  Session ID: dad346dc5a8f09d45501725ea510c5b0
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00447 (223 reqs/sec) | Rendering: 0.00327 (73%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:46:03) [GET]
+  Session ID: 62ddd09d37eb212bdb2355572239b43f
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00314 (318 reqs/sec) | Rendering: 0.00157 (50%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:46:38) [GET]
+  Session ID: 693e32af43a8996f2db48bf90a420f20
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00293 (341 reqs/sec) | Rendering: 0.00153 (52%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:49:54) [GET]
+  Session ID: b162a9e5e3168ecd506fbd3afacc37a9
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00287 (348 reqs/sec) | Rendering: 0.00159 (55%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:50:06) [GET]
+  Session ID: cd0047582bbd97a10c1ef1089b02b3ea
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00267 (374 reqs/sec) | Rendering: 0.00147 (55%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 128.30.52.49 at 2008-07-29 03:50:33) [GET]
+  Session ID: 772536e8ed6498a7c55450f32b2fba5e
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00266 (376 reqs/sec) | Rendering: 0.00145 (54%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-07-29 03:50:56) [GET]
+  Session ID: 6f959ffde35a63621043828954f8170f
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00270 (369 reqs/sec) | Rendering: 0.00151 (55%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 66.116.121.126 at 2008-07-29 12:21:30) [GET]
+  Session ID: 5d73553cf923363572479988d3c421b4
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00525 (190 reqs/sec) | Rendering: 0.00403 (76%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 66.116.121.126 at 2008-07-29 12:21:36) [GET]
+  Session ID: e0194863f8d6c1fcb1551bd56fa21cd8
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00267 (374 reqs/sec) | Rendering: 0.00145 (54%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 66.116.121.126 at 2008-07-29 12:21:46) [GET]
+  Session ID: d186c1ac219c37922703d2c443826aff
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00276 (361 reqs/sec) | Rendering: 0.00146 (52%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 66.116.121.126 at 2008-07-29 12:22:12) [GET]
+  Session ID: 5104d91eadc54e3a320a24459d4fe12c
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00327 (305 reqs/sec) | Rendering: 0.00158 (48%) | 200 OK [http://home.rajohns.com/]
+
+
+Processing StandingsController#index (for 66.116.121.126 at 2008-07-30 17:57:48) [GET]
+  Session ID: 114495bd4c2d38f918427a2784b88861
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00302 (331 reqs/sec) | Rendering: 0.00152 (50%) | 200 OK [http://poker.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-08-02 17:49:59) [GET]
+  Session ID: 040be06095c22234f51b061e70f3c642
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00440 (227 reqs/sec) | Rendering: 0.00237 (53%) | 200 OK [http://poker.rajohns.com/]
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-08-02 18:26:30) [GET]
+  Session ID: 040be06095c22234f51b061e70f3c642
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+
+
+ActionView::TemplateError (No such file or directory - script/../config/../app/views/standings/index.rhtml) in app/views/standings/index.rhtml:
+
+    vendor/rails/actionpack/lib/action_view/base.rb:440:in `mtime'
+    vendor/rails/actionpack/lib/action_view/base.rb:440:in `compile_template?'
+    vendor/rails/actionpack/lib/action_view/base.rb:317:in `compile_and_render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:301:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:260:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:806:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:711:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:247:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:50:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:632:in `call_filter'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:83:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:430:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:430:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:114:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:330:in `process'
+    vendor/rails/railties/lib/dispatcher.rb:41:in `dispatch'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:76:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `synchronize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/rails.rb:74:in `process'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:282:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `each'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/configurator.rb:281:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:128:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/lib/mongrel/command.rb:212:in `run'
+    /var/lib/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:343:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:489:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:60
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:496:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:343:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:496:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    script/server:5:in `require'
+    script/server:5
+
+
+Rendering ./script/../config/../vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing StandingsController#index (for 68.227.55.123 at 2008-08-02 18:26:54) [GET]
+  Session ID: 040be06095c22234f51b061e70f3c642
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00297 (336 reqs/sec) | Rendering: 0.00157 (52%) | 200 OK [http://poker.rajohns.com/]
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000589)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000366)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.000408)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000369)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000352)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000354)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000365)[0m   [0;1mSELECT version FROM schema_info[0m
+  [4;35;1mSQL (0.000352)[0m   [0mSELECT version FROM schema_info[0m
+  [4;36;1mSQL (0.000350)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreatePlayers (1)
+  [4;35;1mSQL (0.099308)[0m   [0mDROP TABLE players[0m
+  [4;36;1mSQL (0.020839)[0m   [0;1mUPDATE schema_info SET version = 0[0m
+  [4;35;1mSQL (0.000590)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000621)[0m   [0;1mSHOW TABLES[0m
+
+
+Processing StandingsController#index (for 66.116.121.126 at 2008-08-04 18:10:06) [GET]
+  Session ID: e20a56003c83e24368dcbad0cf90612f
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.01238 (80 reqs/sec) | Rendering: 0.01114 (90%) | 200 OK [http://poker.rajohns.com/]
+
+
+Processing StandingsController#index (for 66.116.121.126 at 2008-08-05 15:36:05) [GET]
+  Session ID: 905fa6a8a9f220df39e90a66c37f87c0
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00292 (342 reqs/sec) | Rendering: 0.00153 (52%) | 200 OK [http://poker.rajohns.com/]
+  [4;36;1mSQL (0.000000)[0m   [0;1mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;35;1mSQL (0.000000)[0m   [0mMysql::Error: #42S01Table 'schema_info' already exists: CREATE TABLE schema_info (version int(11))[0m
+  [4;36;1mSQL (0.014839)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreatePlayers (1)
+  [4;35;1mSQL (0.039958)[0m   [0mCREATE TABLE players (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `first_name` varchar(255) DEFAULT NULL, `last_name` varchar(255) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000447)[0m   [0;1mUPDATE schema_info SET version = 1[0m
+  [4;35;1mSQL (0.000555)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateResults (2)
+  [4;36;1mSQL (0.003578)[0m   [0;1mCREATE TABLE results (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `player_id` int DEFAULT NULL, `payout_id` int DEFAULT NULL, `fee_paid` tinyint(1) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000420)[0m   [0mUPDATE schema_info SET version = 2[0m
+  [4;36;1mSQL (0.000552)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateTournaments (3)
+  [4;35;1mSQL (0.003938)[0m   [0mCREATE TABLE tournaments (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `date` datetime DEFAULT NULL, `series_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000436)[0m   [0;1mUPDATE schema_info SET version = 3[0m
+  [4;35;1mSQL (0.000559)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateSeries (4)
+  [4;36;1mSQL (0.017937)[0m   [0;1mCREATE TABLE series (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `series_name` varchar(255) DEFAULT NULL, `is_complete` tinyint(1) DEFAULT 0) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000423)[0m   [0mUPDATE schema_info SET version = 4[0m
+  [4;36;1mSQL (0.000553)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreateBounties (5)
+  [4;35;1mSQL (0.003512)[0m   [0mCREATE TABLE bounties (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `bitch_id` int(11) DEFAULT NULL, `pwner_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000429)[0m   [0;1mUPDATE schema_info SET version = 5[0m
+  [4;35;1mSQL (0.000576)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreatePayoutStructures (6)
+  [4;36;1mSQL (0.003498)[0m   [0;1mCREATE TABLE payout_structures (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `num_players` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;35;1mSQL (0.000419)[0m   [0mUPDATE schema_info SET version = 6[0m
+  [4;36;1mSQL (0.000559)[0m   [0;1mSELECT version FROM schema_info[0m
+Migrating to CreatePayouts (7)
+  [4;35;1mSQL (0.004350)[0m   [0mCREATE TABLE payouts (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `place` int(11) DEFAULT NULL, `points` int(11) DEFAULT NULL, `money` int(11) DEFAULT NULL, `payout_structure_id` int(11) DEFAULT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.000429)[0m   [0;1mUPDATE schema_info SET version = 7[0m
+  [4;35;1mSQL (0.000611)[0m   [0mSELECT * FROM schema_info[0m
+  [4;36;1mSQL (0.000933)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.001889)[0m   [0mSHOW FIELDS FROM bounties[0m
+  [4;36;1mSQL (0.001947)[0m   [0;1mSHOW KEYS FROM bounties[0m
+  [4;35;1mSQL (0.001786)[0m   [0mSHOW FIELDS FROM payout_structures[0m
+  [4;36;1mSQL (0.001853)[0m   [0;1mSHOW KEYS FROM payout_structures[0m
+  [4;35;1mSQL (0.002081)[0m   [0mSHOW FIELDS FROM payouts[0m
+  [4;36;1mSQL (0.001878)[0m   [0;1mSHOW KEYS FROM payouts[0m
+  [4;35;1mSQL (0.001948)[0m   [0mSHOW FIELDS FROM players[0m
+  [4;36;1mSQL (0.001886)[0m   [0;1mSHOW KEYS FROM players[0m
+  [4;35;1mSQL (0.001974)[0m   [0mSHOW FIELDS FROM results[0m
+  [4;36;1mSQL (0.001858)[0m   [0;1mSHOW KEYS FROM results[0m
+  [4;35;1mSQL (0.001877)[0m   [0mSHOW FIELDS FROM series[0m
+  [4;36;1mSQL (0.001864)[0m   [0;1mSHOW KEYS FROM series[0m
+  [4;35;1mSQL (0.002099)[0m   [0mSHOW FIELDS FROM tournaments[0m
+  [4;36;1mSQL (0.001958)[0m   [0;1mSHOW KEYS FROM tournaments[0m
+
+
+Processing StandingsController#index (for 66.116.121.126 at 2008-08-07 18:56:59) [GET]
+  Session ID: b43275be94e4281603e0083163ceede0
+  Parameters: {"action"=>"index", "controller"=>"standings"}
+Rendering  within layouts/application
+Rendering standings/index
+Completed in 0.00453 (220 reqs/sec) | Rendering: 0.00322 (70%) | 200 OK [http://poker.rajohns.com/]

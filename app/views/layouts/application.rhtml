@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>Poker Stats</title>
+    <%= stylesheet_link_tag 'styles' %>
+    <script type="text/javascript">
+      if (navigator.appName == "Microsoft Internet Explorer") {
+        alert('Why are you using IE?');
+        window.location = "http://www.mozilla.com/firefox/";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <%= yield -%>
+    </div>
+  </body>
+</html>
