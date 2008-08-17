@@ -2,8 +2,6 @@ class Bounty < ActiveRecord::Base
   
   validates_presence_of :bitch_id, :pwner_id
   
-  test
-  
   def pwner
     Player.find_by_id(self.pwner_id)
   end
