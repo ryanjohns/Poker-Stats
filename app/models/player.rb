@@ -9,6 +9,4 @@ class Player < ActiveRecord::Base
     Bounty.find_all_by_pwner_id(self.id)
   end
   
-  test
-  
 end
