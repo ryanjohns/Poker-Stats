@@ -7,18 +7,21 @@ class Result < ActiveRecord::Base
   attr_reader :place_attr
   attr_reader :bounty_collector_attr
   validates_presence_of :player_id, :tournament_id, :fee_paid
+  validates_each :place do |record, attr, value|
+    if !value.is_a? Fixnum or value <= 0
+      record.errors.add(attr, "must be a positive integer")
+    end
+  end
   validates_each :bounty_collector do |record, attr, value|
     if record.place == 1
       if !value.nil?
+        puts value.name
+        puts record.tournament.tournament_date
+        puts record.player.name
         record.errors.add(attr, "must be empty if place is 1")
       end
     elsif value.nil?
       record.errors.add(attr, "must be set if place is not 1")
-    end
-  end
-  validates_each :place do |record, attr, value|
-    if !value.is_a? Fixnum or value <= 0
-      record.errors.add(attr, "must be a positive integer")
     end
   end
   
@@ -44,7 +47,12 @@ class Result < ActiveRecord::Base
   
   def bounty_collector
     return @bounty_collector_attr if @bounty_collector_attr
-    @bounty_collector_attr = Player.find_by_id(bounty_collector_id)
+    if bounty_collector_id
+      @bounty_collector_attr = Player.find_by_id(bounty_collector_id)
+    else
+      @bounty_collector_attr = nil
+    end
+    @bounty_collector_attr
   end
   
   def bounty_collector_id=(value)
