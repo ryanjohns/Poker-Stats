@@ -3,8 +3,8 @@ class CreatePlayerStats < ActiveRecord::Migration
     create_table :player_stats do |t|
       t.column :series_id, :integer
       t.column :player_id, :integer
-      t.column :profit, :integer, :default => 0
-      t.column :winnings, :integer, :default => 0
+      t.column :profit, :decimal, :precision => 8, :scale => 2, :default => 0
+      t.column :winnings, :decimal, :precision => 8, :scale => 2, :default => 0
       t.column :roi, :decimal, :precision => 8, :scale => 2, :default => 0
       t.column :top_ten_points, :integer, :default => 0
       t.column :total_points, :integer, :default => 0

@@ -12,7 +12,7 @@ class CreateTestData < ActiveRecord::Migration
     ps = PayoutStructure.create!(:num_players=>3, :series=>s)
     pay1 = Payout.create!(:payout_structure=>ps, :place=>1, :points=>100, :money=>300)
     pay2 = Payout.create!(:payout_structure=>ps, :place=>2, :points=>50, :money=>200)
-    pay3 = Payout.create!(:payout_structure=>ps, :place=>3, :points=>25, :money=>100)
+    pay3 = Payout.create!(:payout_structure=>ps, :place=>3, :points=>25)
     
     t = Tournament.create!(:series=>s, :tournament_date=>Time.now, :num_entrants=>3)
     
