@@ -1,1 +1,46 @@
-Hello World
+<table>
+  <tr>
+	  <th></th>
+	  <th><%= sort_column("Rank") %></th>
+	  <th><%= sort_column("Name") %></th>
+	  <th><%= sort_column("Top 10 Points", "top_ten_points") %></th>
+	  <th><%= sort_column("Number Played") %></th>
+	  <th><%= sort_column("Total Points") %></th>
+	  <th><%= sort_column("Average Points") %></th>
+	  <th><%= sort_column("Number of Firsts") %></th>
+	  <th><%= sort_column("Number of Cashes") %></th>
+	  <th><%= sort_column("Percent Cash") %></th>
+	  <th><%= sort_column("Average Finish") %></th>
+	  <th><%= sort_column("Total Buy-Ins", "total_buy_ins") %></th>
+	  <th><%= sort_column("Winnings") %></th>
+	  <th><%= sort_column("Profit") %></th>
+	  <th><%= sort_column("ROI") %></th>
+	  <th><%= sort_column("Number of Bounties") %></th>
+	  <th><%= sort_column("Number of Fees") %></th>
+	  <th><%= sort_column("Total Fees") %></th>
+  </tr>
+  <% item_num = 1 %>
+  <% @player_stats.each do |ps| %>
+	  <tr>
+	    <td><%= item_num %>.)</td>
+	    <td><%= ps.rank %></td>
+	    <td><%= ps.player.name %></td>
+	    <td><%= ps.top_ten_points %></td>
+	    <td><%= ps.num_played %></td>
+	    <td><%= ps.total_points %></td>
+	    <td><%= ps.avg_points %></td>
+	    <td><%= ps.num_firsts %></td>
+	    <td><%= ps.num_cashes %></td>
+	    <td><%= number_to_percentage(ps.percent_cash, :precision=>2) %></td>
+	    <td><%= ps.avg_finish %></td>
+	    <td><%= number_to_currency(ps.total_buy_ins) %></td>
+	    <td><%= number_to_currency(ps.winnings) %></td>
+	    <td><%= number_to_currency(ps.profit) %></td>
+	    <td><%= number_to_percentage(ps.roi, :precision=>2) %></td>
+	    <td><%= ps.num_bounties %></td>
+	    <td><%= ps.num_fees %></td>
+	    <td><%= number_to_currency(ps.total_fees) %></td>
+	  </tr>
+	  <% item_num += 1 %>
+	<% end %>
+</table>

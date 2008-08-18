@@ -3,6 +3,7 @@ class CreatePlayerStats < ActiveRecord::Migration
     create_table :player_stats do |t|
       t.column :series_id, :integer
       t.column :player_id, :integer
+      t.column :rank, :integer, :default => 0
       t.column :profit, :decimal, :precision => 8, :scale => 2, :default => 0
       t.column :winnings, :decimal, :precision => 8, :scale => 2, :default => 0
       t.column :roi, :decimal, :precision => 8, :scale => 2, :default => 0

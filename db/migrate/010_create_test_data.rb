@@ -3,6 +3,9 @@ class CreateTestData < ActiveRecord::Migration
   # To test the automation of player stats generation (for player_stats table),
   # this can be run, reversed, and re-run as needed
   def self.up
+    Series.destroy_all
+    Player.destroy_all
+    
     p1 = Player.create!(:first_name=>"Eric", :last_name=>"Tipton")
     p2 = Player.create!(:first_name=>"Ryan", :last_name=>"Johns")
     p3 = Player.create!(:first_name=>"Amir", :last_name=>"Manji")
