@@ -1,3 +1,5 @@
+<h2 style="text-align:center;"><%= @series.name %></h2>
+
 <table id="standings">
   <tr>
 	  <th></th>
@@ -19,10 +21,11 @@
 	  <th><%= sort_column("Number of Fees") %></th>
 	  <th><%= sort_column("Total Fees") %></th>
   </tr>
-  <% item_num = 1 %>
-  <% @player_stats.each do |ps| %>
-	  <tr class="<%= cycle('even', 'odd', :name => 'row_cycle') -%>">
-	    <td><%= item_num %>.)</td>
+  <% item_num = 1 -%>
+  <% @player_stats.each do |ps| -%>
+    <% row_class = cycle('even', 'odd', :name => 'row_cycle') -%>
+	  <tr class="<%= row_class -%>" onmouseover="className='hover'" onmouseout="className='<%= row_class -%>'">
+	    <td><%= item_num %>)</td>
 	    <td><%= ps.rank %></td>
 	    <td class="name-column"><%= ps.player.name %></td>
 	    <td><%= ps.top_ten_points %></td>
@@ -41,6 +44,6 @@
 	    <td><%= ps.num_fees %></td>
 	    <td><%= number_to_currency(ps.total_fees) %></td>
 	  </tr>
-	  <% item_num += 1 %>
-	<% end %>
+	  <% item_num += 1 -%>
+	<% end -%>
 </table>

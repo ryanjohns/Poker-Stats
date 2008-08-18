@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   background: #eee;
 }
 
@@ -10,18 +10,18 @@ table#standings {
   text-align: center;
 }
 
-table#standings tr th {
+table#standings th {
   background: #4682b4;
   padding: 2px 3px;
 }
 
-table#standings tr th a {
+table#standings th a {
   color: #fff;
   text-decoration: none;
 }
 
-table#standings tr th a:hover {
-  color: #444;
+table#standings th a:hover {
+  color: #333;
 }
 
 table#standings tr.odd {
@@ -32,8 +32,13 @@ table#standings tr.even {
   background: #b0c4de;
 }
 
+table#standings tr.hover {
+  background: #ff6347;
+}
+
 table#standings td {
   padding: 2px 3px;
+  cursor: default;
 }
 
 table#standings td.name-column {
