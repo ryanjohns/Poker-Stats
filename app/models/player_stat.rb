@@ -29,6 +29,10 @@ class PlayerStat < ActiveRecord::Base
     top_ten_points_arr = []
     finish_spot_total = 0
     bounties_total = 0
+    # reset all to 0
+    self.attributes.delete_if{|key,val| ["id", "player_id", "series_id"].include? key}.each do |key, val|
+      send("#{key}=", 0)
+    end
     series.tournaments.each do |tourney|
       result = Result.find_by_tournament_id_and_player_id(tourney.id, player_id)
       if result
