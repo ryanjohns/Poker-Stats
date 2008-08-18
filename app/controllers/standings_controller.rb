@@ -4,7 +4,7 @@ class StandingsController < ApplicationController
     order_by = params[:order_by] || "rank"
     order = params[:order] || "asc"
 
-    if order_by == "name"
+    if order_by == "name" and ["asc", "desc"].include? order
       order_by = "last_name"
     elsif !PlayerStat.new.respond_to? order_by or !["asc", "desc"].include? order
       order_by = "rank"
