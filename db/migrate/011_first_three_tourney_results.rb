@@ -40,15 +40,15 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>eric_tipton, :place=>8, :bounty_collector=>kristy_arnett, :fee_paid=>true)
     
     ryan_johns = Player.create!(:first_name=>"Ryan", :last_name=>"Johns")
-    ryan_r = Player.create!(:first_name=>"Ryan", :last_name=>"R")
-    Result.create!(:tournament=>t, :player=>ryan_johns, :place=>7, :bounty_collector=>ryan_r, :fee_paid=>true)
+    ryan_runge = Player.create!(:first_name=>"Ryan", :last_name=>"Runge")
+    Result.create!(:tournament=>t, :player=>ryan_johns, :place=>7, :bounty_collector=>ryan_runge, :fee_paid=>true)
     
     josh_smith = Player.create!(:first_name=>"Josh", :last_name=>"Smith")
     lizzy_morone = Player.create!(:first_name=>"Lizzy", :last_name=>"Morone")
     Result.create!(:tournament=>t, :player=>josh_smith, :place=>6, :bounty_collector=>lizzy_morone, :fee_paid=>true)
 
     ronnie_morone = Player.create!(:first_name=>"Ronnie", :last_name=>"Morone")    
-    Result.create!(:tournament=>t, :player=>ryan_r, :place=>5, :bounty_collector=>ronnie_morone, :fee_paid=>true)
+    Result.create!(:tournament=>t, :player=>ryan_runge, :place=>5, :bounty_collector=>ronnie_morone, :fee_paid=>true)
 
     Result.create!(:tournament=>t, :player=>kristy_arnett, :place=>4, :bounty_collector=>shawn_green, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>lizzy_morone, :place=>3, :bounty_collector=>shawn_green, :fee_paid=>true)
