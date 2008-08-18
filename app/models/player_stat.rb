@@ -57,11 +57,11 @@ class PlayerStat < ActiveRecord::Base
       bounties_total += Result.find_all_by_tournament_id_and_bounty_collector_id(tourney.id, player_id).size
     end
     self.profit = winnings - total_buy_ins
-    self.roi = (profit/total_buy_ins * 100 rescue 0)
-    self.avg_points = (total_points/num_played rescue 0)
+    self.roi = (profit*1.0/total_buy_ins * 100 rescue 0)
+    self.avg_points = (total_points*1.0/num_played rescue 0)
     self.num_bounties = bounties_total
-    self.avg_finish = (finish_spot_total/num_played rescue 0)
-    self.percent_cash = (num_cashes/num_played * 100 rescue 0)
+    self.avg_finish = (finish_spot_total*1.0/num_played rescue 0)
+    self.percent_cash = (num_cashes*1.0/num_played * 100 rescue 0)
     save!
   end
 end
