@@ -1,4 +1,42 @@
 body {
   font-family: sans-serif;
   font-size: 14px;
+  background: #eee;
+}
+
+table#standings {
+  border-collapse: separate;
+  border-spacing: 2px;
+  text-align: center;
+}
+
+table#standings tr th {
+  background: #4682b4;
+  padding: 2px 3px;
+}
+
+table#standings tr th a {
+  color: #fff;
+  text-decoration: none;
+}
+
+table#standings tr th a:hover {
+  color: #444;
+}
+
+table#standings tr.odd {
+  background: #91a2bc;
+}
+
+table#standings tr.even {
+  background: #b0c4de;
+}
+
+table#standings td {
+  padding: 2px 3px;
+}
+
+table#standings td.name-column {
+  text-align: left;
+  white-space: nowrap;
 }
