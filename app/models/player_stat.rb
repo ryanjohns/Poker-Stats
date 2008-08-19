@@ -17,7 +17,7 @@ class PlayerStat < ActiveRecord::Base
     
     def rank_all_stats
       rank = 1
-      find(:all, :order=>"top_ten_points desc, roi desc").each do |ps|
+      find(:all, :order=>"top_ten_points desc, roi desc, total_points desc, avg_finish desc, num_played desc").each do |ps|
         ps.rank = rank
         ps.save!
         rank += 1
