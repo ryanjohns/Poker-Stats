@@ -8,6 +8,7 @@ table#standings {
   border-collapse: separate;
   border-spacing: 2px;
   text-align: center;
+  margin: 0 auto;
 }
 
 table#standings th {
