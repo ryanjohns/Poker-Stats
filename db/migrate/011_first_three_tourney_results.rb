@@ -135,7 +135,7 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     michelle_unknown = Player.create!(:first_name=>"Michelle", :last_name=>"Unknown")
     Result.create!(:tournament=>t, :player=>bethany_cermak, :place=>11, :bounty_collector=>michelle_unknown, :fee_paid=>true)
 
-    zach_messer = Player.create!(:first_name=>"Zach", :last_name=>"Messer")
+    zach_messer = Player.create!(:first_name=>"Zack", :last_name=>"Messer")
     Result.create!(:tournament=>t, :player=>zach_messer, :place=>10, :bounty_collector=>ryan_johns, :fee_paid=>true)
 
     Result.create!(:tournament=>t, :player=>danny_egelhoff, :place=>9, :bounty_collector=>michelle_unknown, :fee_paid=>true)
