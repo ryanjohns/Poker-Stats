@@ -57,8 +57,8 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     
     # Week 2
     ps = PayoutStructure.create!(:num_players=>17, :series=>series)
-    Payout.create!(:payout_structure=>ps, :place=>1, :points=>45, :money=>212.5)
-    Payout.create!(:payout_structure=>ps, :place=>2, :points=>23, :money=>127.5)
+    Payout.create!(:payout_structure=>ps, :place=>1, :points=>45, :money=>215)
+    Payout.create!(:payout_structure=>ps, :place=>2, :points=>23, :money=>125)
     Payout.create!(:payout_structure=>ps, :place=>3, :points=>12, :money=>85)
     Payout.create!(:payout_structure=>ps, :place=>4, :points=>8)
     Payout.create!(:payout_structure=>ps, :place=>5, :points=>6)
