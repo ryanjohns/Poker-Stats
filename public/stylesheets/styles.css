@@ -4,6 +4,10 @@ body {
   background: #eee;
 }
 
+img {
+  border: none;
+}
+
 table#standings {
   border-collapse: separate;
   border-spacing: 2px;
@@ -45,4 +49,12 @@ table#standings td {
 table#standings td.name-column {
   text-align: left;
   white-space: nowrap;
+}
+
+div#footer {
+  margin: 10px;
+}
+
+div#footer img {
+  border: none;
 }
