@@ -1,0 +1,13 @@
+<h3>Create/Edit Player</h3>
+
+<%= error_messages_for :player %>
+
+<% form_for :player, @player, :url => {:action => 'edit'} do |f| %>
+  First Name:<br />
+  <%= f.text_field :first_name %>
+  <br /><br />
+  Last Name:<br />
+  <%= f.text_field :last_name %>
+  <br /><br />
+  <%= submit_tag 'Save' %>
+<% end %>

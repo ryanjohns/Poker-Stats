@@ -1,0 +1,8 @@
+<ol>
+  <% @players.each do |player| %>
+    <li>
+      <%= player.name %>
+      <%= link_to '[edit]', {:action => 'edit', :id => player} %>
+    </li>
+  <% end %>
+</ol>
