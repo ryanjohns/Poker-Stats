@@ -1,27 +1,30 @@
+<% title(@player.name(:first_name_first => true)) %>
+
 <h2><%= @player.name(:first_name_first => true) %></h2>
 <% @results.each do |series_results| %>
-<div class='div_results'>
-	<h3><%= series_results.first.tournament.series.name %></h3>
-	<table class='table_results'>
-		<tr>
-			<th>Date</th>
-			<th>Place</th>
-			<th>Points</th>
-			<th>Money Won</th>
-			<th>Busted By</th>
-			<th>Fee paid?</th>
-		</tr>
+  <div class='div_results'>
+  	<h3><%= series_results.first.tournament.series.name %></h3>
+  	<table class='table_results'>
+  		<tr>
+  			<th>Date</th>
+  			<th>Place</th>
+  			<th>Points</th>
+  			<th>Money Won</th>
+  			<th>Busted By</th>
+  			<th>Fee Paid?</th>
+  		</tr>
 		
-		<% series_results.each do |result| %>
-		<tr class="<%= cycle('even', 'odd') %>">
-			<td><%= tournament_link result.tournament %></td>
-			<td><%= result.payout.place %></td>
-			<td><%= result.payout.points %></td>
-			<td><%= number_to_currency result.payout.money %></td>
-			<td><%= player_link result.bounty_collector_id rescue "" %></td>
-			<td><%= result.fee_paid? ? "yes" : "no" %></td>
-		<% end %>
+  		<% series_results.each do |result| %>
+    		<tr class="<%= cycle('even', 'odd') %>">
+    			<td class='name-column'><%= tournament_link result.tournament %></td>
+    			<td><%= result.payout.place.ordinalize %></td>
+    			<td><%= result.payout.points %></td>
+    			<td><%= number_to_currency result.payout.money %></td>
+    			<td class='name-column'><%= player_link result.bounty_collector_id rescue "" %></td>
+    			<td><%= result.fee_paid? ? "Yes" : "No" %></td>
+    		</tr>
+  		<% end %>
 		
-	</table>	
-</div>
+  	</table>	
+  </div>
 <% end %>

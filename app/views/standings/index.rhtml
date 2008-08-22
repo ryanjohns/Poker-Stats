@@ -27,7 +27,7 @@
     <% row_class = cycle('even', 'odd', :name => 'row_cycle') -%>
 	  <tr class="<%= row_class -%>" onmouseover="className='hover'" onmouseout="className='<%= row_class -%>'">
 	    <td><%= item_num %>)</td>
-	    <td><%= ps.rank %></td>
+	    <td><%= ps.rank.ordinalize %></td>
 	    <td class="name-column"><%= player_link ps.player.id %></td>
 	    <td><%= ps.top_ten_points %></td>
 	    <td><%= ps.num_played %></td>

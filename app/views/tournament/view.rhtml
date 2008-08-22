@@ -1,7 +1,7 @@
 <% title(@tournament.tournament_date.strftime("%B %e, %Y") + " Results") %>
 
 <style type='text/css'>
-	body{
+	body {
 		background-attachment: fixed;
 		background-image: url(/images/tyrannosaurus.gif);
 		background-repeat: no-repeat;
@@ -28,14 +28,15 @@
 		</tr>
 		
 		<% @results.each do |result| %>
-		<tr class="<%= cycle('even', 'odd') %>">
-			<td><%= result.payout.place %></td>
-			<td class='name-column'><%= player_link result.player %></td>
-			<td><%= result.payout.points %></td>
-			<td><%= number_to_currency result.payout.money %></td>
-			<td><%= result.bounties %></td>
-			<td class='name-column'><%= player_link(result.bounty_collector_id) rescue "" %></td>
-			<td><%= result.fee_paid? ? "yes" : "no" %></td>
+  		<tr class="<%= cycle('even', 'odd') %>">
+  			<td><%= result.payout.place.ordinalize %></td>
+  			<td class='name-column'><%= player_link result.player %></td>
+  			<td><%= result.payout.points %></td>
+  			<td><%= number_to_currency result.payout.money %></td>
+  			<td><%= result.bounties %></td>
+  			<td class='name-column'><%= player_link(result.bounty_collector_id) rescue "" %></td>
+  			<td><%= result.fee_paid? ? "Yes" : "No" %></td>
+  		</tr>
 		<% end %>
 		
 	</table>	

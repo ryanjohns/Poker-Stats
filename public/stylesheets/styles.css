@@ -10,6 +10,18 @@ img {
   border: none;
 }
 
+div a {
+  color: blue;
+}
+
+div a:visited {
+  color: blue;
+}
+
+div a:hover {
+  color: red;
+}
+
 table#standings {
   border-collapse: separate;
   border-spacing: 2px;
@@ -91,12 +103,11 @@ table.table_results td {
   padding: 2px 3px;
 }
 
-a, a:visited  { 
+td a, td a:visited  { 
 	color: #000;
 	text-decoration: underline; 
 }
 
-a:hover { 
+td a:hover { 
 	color: #fff; 
-	background-color:#000;
 }
