@@ -1,4 +1,7 @@
 <% title(@player.name(:first_name_first => true)) %>
+<script type="text/javascript">
+	document.body.style.background = "#EEEEEE url(/images/stegosaurus.gif) no-repeat fixed bottom right";
+</script>
 
 <h2><%= @player.name(:first_name_first => true) %></h2>
 <% @results.each do |series_results| %>
