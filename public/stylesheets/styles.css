@@ -11,11 +11,11 @@ img {
 }
 
 div a {
-  color: blue;
+  color: #4682b4;
 }
 
 div a:visited {
-  color: blue;
+  color: #4682b4;
 }
 
 div a:hover {
