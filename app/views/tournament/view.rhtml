@@ -1,13 +1,9 @@
 <% title(@tournament.tournament_date.strftime("%B %e, %Y") + " Results") %>
 
-<style type='text/css'>
-	body {
-		background-attachment: fixed;
-		background-image: url(/images/tyrannosaurus.gif);
-		background-repeat: no-repeat;
-		background-position: bottom right;
-	}
-</style>
+<script type="text/javascript">
+	document.body.style.background = "#EEEEEE url(/images/tyrannosaurus.gif) no-repeat fixed bottom right";
+</script>
+
 
 <h2><%= @tournament.series.name %>: <%= @tournament.tournament_date.strftime "%B %e, %Y" %></h2>
 <div class='div_stats'>
