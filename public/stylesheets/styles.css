@@ -2,6 +2,8 @@ body {
   font-family: sans-serif;
   font-size: 12px;
   background: #eee;
+	margin: 0px;
+	padding: 0px;
 }
 
 img {
@@ -57,4 +59,37 @@ div#footer {
 
 div#footer img {
   border: none;
+}
+
+table.table_results {
+  border-collapse: separate;
+  border-spacing: 2px;
+	background: #eee;
+}
+
+table.table_results th {
+  background: #4682b4;
+  padding: 2px 3px;
+  color: #fff;
+  text-decoration: none;
+}
+
+table.table_results tr.odd {
+  background: #91a2bc;
+}
+
+table.table_results tr.even {
+  background: #b0c4de;
+}
+
+table.table_results tr.even:hover, table.table_results tr.odd:hover {
+  background: #ff6347;
+}
+
+table.table_results td {
+  padding: 2px 3px;
+}
+
+a:visited, a{
+	color: #00f;
 }

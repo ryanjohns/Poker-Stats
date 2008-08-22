@@ -13,7 +13,13 @@
     </script>
   </head>
   <body>
-    <div id="page">
+		<div id="navigation" style="border-bottom: solid 1px; padding-bottom: 8px;">&nbsp;
+			<div style="display:inline; position: absolute; left: 5px; top: 6px"><b>CardPlayer Wednesday Home Game Statistics</b></div>
+			<div style="display:inline; position: absolute; right: 5px; top: 6px">
+				<%= link_to "Standings", :controller => 'standings', :action => 'index' %> | <%= link_to "Tournament Results", :controller => 'tournament', :action => 'index' %>
+			</div>
+		</div>
+    <div id="page" style="margin: 5px; padding: 5px;">
       <%= yield -%>
     </div>
     <div id="footer">

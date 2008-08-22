@@ -1,0 +1,40 @@
+<style type='text/css'>
+	body{
+		background-attachment: fixed;
+		background-image: url(/images/tyrannosaurus.gif);
+		background-repeat: no-repeat;
+		background-position: bottom right;
+	}
+</style>
+
+<h2><%= @tournament.series.name %>: <%= @tournament.tournament_date.strftime "%B %e, %Y" %></h2>
+<div class='div_stats'>
+	Entrants: <%= @results.nitems %><br/>
+	Total prize pool: <%= number_to_currency @results.sum { |result| result.payout.money }%><br/>
+</div>
+<br/>
+<div class='div_results'>
+	<table class='table_results'>
+		<tr>
+			<th>Place</th>
+			<th>Name</th>
+			<th>Points</th>
+			<th>Money Won</th>
+			<th>Bounties</th>
+			<th>Busted By</th>
+			<th>Fee paid?</th>
+		</tr>
+		
+		<% @results.each do |result| %>
+		<tr class="<%= cycle('even', 'odd') %>">
+			<td><%= result.payout.place %></td>
+			<td><%= result.player.name %></td>
+			<td><%= result.payout.points %></td>
+			<td><%= number_to_currency result.payout.money %></td>
+			<td><%= result.bounties %></td>
+			<td><%= Player.find(result.bounty_collector_id).name rescue "" %></td>
+			<td><%= result.fee_paid? %></td>
+		<% end %>
+		
+	</table>	
+</div>
