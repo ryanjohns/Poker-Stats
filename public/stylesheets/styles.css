@@ -19,7 +19,7 @@ div a:visited {
 }
 
 div a:hover {
-  color: red;
+  color: #ff6347;
 }
 
 table#standings {
