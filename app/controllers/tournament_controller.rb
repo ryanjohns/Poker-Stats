@@ -13,6 +13,7 @@ class TournamentController < ApplicationController
   def view
     redirect_to :action => 'index' and return unless @tournament = Tournament.find(params[:id]) rescue false
     @results = Result.find_all_by_tournament_id(params[:id], :order => 'payout_id ASC')
+    @results.sort { |a,b| a.payout.place  <=> b.payout.place }
     
     @results.each do |result|
       unless result.bounty_collector_id.blank?

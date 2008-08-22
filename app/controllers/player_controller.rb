@@ -11,4 +11,9 @@ class PlayerController < ApplicationController
       redirect_to :action => 'index' if @player.save
     end
   end
+  
+  def view
+    redirect_to :controller =>'standings', :action => 'index' and return unless @player = Player.find(params[:id]) rescue false
+    @results = Result.find_all_by_player_id(params[:id])
+  end
 end
