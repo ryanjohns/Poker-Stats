@@ -1,4 +1,6 @@
-<h3>Create/Edit Player</h3>
+<% title((@player.new_record? ? 'Create' : 'Edit') + ' Player') %>
+
+<h3><%= @player.new_record? ? 'Create' : 'Edit' %> Player</h3>
 
 <%= error_messages_for :player %>
 
