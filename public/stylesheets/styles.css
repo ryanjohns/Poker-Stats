@@ -48,7 +48,7 @@ table#standings td {
   cursor: default;
 }
 
-table#standings td.name-column {
+td.name-column {
   text-align: left;
   white-space: nowrap;
 }
@@ -65,6 +65,7 @@ table.table_results {
   border-collapse: separate;
   border-spacing: 2px;
 	background: #eee;
+	text-align: center;
 }
 
 table.table_results th {

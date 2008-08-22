@@ -24,18 +24,18 @@
 			<th>Money Won</th>
 			<th>Bounties</th>
 			<th>Busted By</th>
-			<th>Fee paid?</th>
+			<th>Fee Paid?</th>
 		</tr>
 		
 		<% @results.each do |result| %>
   		<tr class="<%= cycle('even', 'odd') %>">
   			<td><%= result.payout.place %></td>
-  			<td><%= result.player.name %></td>
+  			<td class="name-column"><%= result.player.name %></td>
   			<td><%= result.payout.points %></td>
   			<td><%= number_to_currency result.payout.money %></td>
   			<td><%= result.bounties %></td>
-  			<td><%= Player.find(result.bounty_collector_id).name rescue "" %></td>
-  			<td><%= result.fee_paid? %></td>
+  			<td class="name-column"><%= Player.find(result.bounty_collector_id).name rescue "" %></td>
+  			<td><%= result.fee_paid? ? 'Yes' : 'No' %></td>
 			</tr>
 		<% end %>
 		
