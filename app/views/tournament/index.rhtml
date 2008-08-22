@@ -6,7 +6,7 @@
 		<%= series.name %>
 		<ul>
 			<% @tournaments[series.id].each do |tournament| %>
-				<li><%= link_to(tournament.tournament_date.strftime("%B %e, %Y"), :controller => 'tournament', :action => 'view', :id => tournament.id) %></li>
+				<li><%= tournament_link tournament %></li>
 			<% end %>
 		</ul>
 	</div>

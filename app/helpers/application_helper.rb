@@ -9,6 +9,14 @@ module ApplicationHelper
     end
   end
   
+  def player_link(id)
+    link_to Player.find(id).name, :controller => 'player', :action => 'view', :id => id
+  end
+  
+  def tournament_link(id)
+    link_to(Tournament.find(id).tournament_date.strftime("%B %e, %Y"), :controller => 'tournament', :action => 'view', :id => id)
+  end
+  
   def title(page_title)
     content_for(:title) { page_title }
   end

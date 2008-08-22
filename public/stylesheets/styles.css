@@ -91,6 +91,12 @@ table.table_results td {
   padding: 2px 3px;
 }
 
-a:visited, a{
-	color: #00f;
+a, a:visited  { 
+	color: #000;
+	text-decoration: underline; 
+}
+
+a:hover { 
+	color: #fff; 
+	background-color:#000;
 }

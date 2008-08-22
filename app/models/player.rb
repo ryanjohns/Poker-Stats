@@ -5,8 +5,12 @@ class Player < ActiveRecord::Base
   
   validates_presence_of :first_name, :last_name
   
-  def name
-    last_name.to_s + ", " + first_name.to_s
+  def name(options = {})
+    if options[:first_name_first]
+      first_name.to_s + " " + last_name.to_s 
+    else
+      last_name.to_s + ", " + first_name.to_s
+    end
   end
   
 end

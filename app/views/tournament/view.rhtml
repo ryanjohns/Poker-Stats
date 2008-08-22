@@ -28,15 +28,14 @@
 		</tr>
 		
 		<% @results.each do |result| %>
-  		<tr class="<%= cycle('even', 'odd') %>">
-  			<td><%= result.payout.place %></td>
-  			<td class="name-column"><%= result.player.name %></td>
-  			<td><%= result.payout.points %></td>
-  			<td><%= number_to_currency result.payout.money %></td>
-  			<td><%= result.bounties %></td>
-  			<td class="name-column"><%= Player.find(result.bounty_collector_id).name rescue "" %></td>
-  			<td><%= result.fee_paid? ? 'Yes' : 'No' %></td>
-			</tr>
+		<tr class="<%= cycle('even', 'odd') %>">
+			<td><%= result.payout.place %></td>
+			<td><%= player_link result.player %></td>
+			<td><%= result.payout.points %></td>
+			<td><%= number_to_currency result.payout.money %></td>
+			<td><%= result.bounties %></td>
+			<td><%= player_link(result.bounty_collector_id) rescue "" %></td>
+			<td><%= result.fee_paid? ? "yes" : "no" %></td>
 		<% end %>
 		
 	</table>	
