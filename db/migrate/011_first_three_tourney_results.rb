@@ -24,7 +24,7 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     
     andria_smith = Player.create!(:first_name=>"Andria", :last_name=>"Smith")
     eric_tipton = Player.create!(:first_name=>"Eric", :last_name=>"Tipton")
-    Result.create!(:tournament=>t, :player=>andrea_smith, :place=>12, :bounty_collector=>eric_tipton, :fee_paid=>true)
+    Result.create!(:tournament=>t, :player=>andria_smith, :place=>12, :bounty_collector=>eric_tipton, :fee_paid=>true)
     
     amir_manji = Player.create!(:first_name=>"Amir", :last_name=>"Manji")
     shawn_green = Player.create!(:first_name=>"Shawn", :last_name=>"Green")
