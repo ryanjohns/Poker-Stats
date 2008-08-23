@@ -3,23 +3,9 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
   # To test the automation of player stats generation (for player_stats table),
   # this can be run, reversed, and re-run as needed
   def self.up
-    Series.destroy_all
-    Player.destroy_all
-    
-    series = Series.create!(:name=>"Season 3")
+    series = Series.find_or_create_by_name("Season 3")
     
     # Week 1
-    ps = PayoutStructure.create!(:num_players=>12, :series=>series)
-    Payout.create!(:payout_structure=>ps, :place=>1, :points=>35, :money=>150)
-    Payout.create!(:payout_structure=>ps, :place=>2, :points=>17, :money=>90)
-    Payout.create!(:payout_structure=>ps, :place=>3, :points=>10, :money=>60)
-    Payout.create!(:payout_structure=>ps, :place=>4, :points=>7)
-    Payout.create!(:payout_structure=>ps, :place=>5, :points=>5)
-    Payout.create!(:payout_structure=>ps, :place=>6, :points=>3)
-    for i in (7..12) do
-      Payout.create!(:payout_structure=>ps, :place=>i)
-    end
-    
     t = Tournament.create!(:series=>series, :tournament_date=>Date.new(2008, 7, 30), :num_entrants=>12)
     
     andria_smith = Player.create!(:first_name=>"Andria", :last_name=>"Smith")
@@ -56,19 +42,6 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>shawn_green, :place=>1, :fee_paid=>true)
     
     # Week 2
-    ps = PayoutStructure.create!(:num_players=>17, :series=>series)
-    Payout.create!(:payout_structure=>ps, :place=>1, :points=>45, :money=>215)
-    Payout.create!(:payout_structure=>ps, :place=>2, :points=>23, :money=>125)
-    Payout.create!(:payout_structure=>ps, :place=>3, :points=>12, :money=>85)
-    Payout.create!(:payout_structure=>ps, :place=>4, :points=>8)
-    Payout.create!(:payout_structure=>ps, :place=>5, :points=>6)
-    Payout.create!(:payout_structure=>ps, :place=>6, :points=>4)
-    Payout.create!(:payout_structure=>ps, :place=>7, :points=>3)
-    Payout.create!(:payout_structure=>ps, :place=>8, :points=>3)
-    for i in (9..17) do
-      Payout.create!(:payout_structure=>ps, :place=>i)
-    end
-    
     t = Tournament.create!(:series=>series, :tournament_date=>Date.new(2008, 8, 6), :num_entrants=>17)
     
     brian_fidler = Player.create!(:first_name=>"Brian", :last_name=>"Fidler")
@@ -108,19 +81,6 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>erik_fast, :place=>1, :fee_paid=>true)
 
     # Week 3
-    ps = PayoutStructure.create!(:num_players=>16, :series=>series)
-    Payout.create!(:payout_structure=>ps, :place=>1, :points=>45, :money=>200)
-    Payout.create!(:payout_structure=>ps, :place=>2, :points=>23, :money=>120)
-    Payout.create!(:payout_structure=>ps, :place=>3, :points=>12, :money=>80)
-    Payout.create!(:payout_structure=>ps, :place=>4, :points=>8)
-    Payout.create!(:payout_structure=>ps, :place=>5, :points=>6)
-    Payout.create!(:payout_structure=>ps, :place=>6, :points=>4)
-    Payout.create!(:payout_structure=>ps, :place=>7, :points=>3)
-    Payout.create!(:payout_structure=>ps, :place=>8, :points=>3)
-    for i in (9..16) do
-      Payout.create!(:payout_structure=>ps, :place=>i)
-    end
-    
     t = Tournament.create!(:series=>series, :tournament_date=>Date.new(2008, 8, 13), :num_entrants=>16)
     
     Result.create!(:tournament=>t, :player=>shawn_green, :place=>16, :bounty_collector=>bethany_cermak, :fee_paid=>true)

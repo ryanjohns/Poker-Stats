@@ -29,15 +29,13 @@ class PlayerStat < ActiveRecord::Base
     top_ten_points_arr = []
     finish_spot_total = 0
     bounties_total = 0
-    # reset all to 0
-    self.attributes.delete_if{|key,val| ["id", "player_id", "series_id"].include? key}.each do |key, val|
-      send("#{key}=", 0)
-    end
+    reset_stats
+
     series.tournaments.each do |tourney|
       result = Result.find_by_tournament_id_and_player_id(tourney.id, player_id)
       if result
+        self.winnings += result.money_won
         payout = result.payout
-        self.winnings += payout.money
         self.total_points += payout.points
         if top_ten_points_arr.size < 10
           top_ten_points_arr << payout.points
@@ -49,7 +47,7 @@ class PlayerStat < ActiveRecord::Base
         self.num_played += 1
         self.total_buy_ins += 25
         self.num_firsts += 1 if payout.place == 1
-        self.num_cashes += 1 if payout.money > 0
+        self.num_cashes += 1 if result.money_won > 0
         finish_spot_total += payout.place
         self.num_fees += 1 if result.fee_paid?
         self.total_fees += 5 if result.fee_paid?
@@ -64,4 +62,12 @@ class PlayerStat < ActiveRecord::Base
     self.percent_cash = (num_cashes*1.0/num_played * 100 rescue 0)
     save!
   end
+  
+  def reset_stats
+    # reset all to 0
+    self.attributes.delete_if{|key,val| ["id", "player_id", "series_id"].include? key}.each do |key, val|
+      send("#{key}=", 0)
+    end
+  end
+  
 end

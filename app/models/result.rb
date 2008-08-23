@@ -62,6 +62,15 @@ class Result < ActiveRecord::Base
 
   def before_save
     self.payout_id = Payout.find_by_place_and_payout_structure_id(@place_attr, tournament.payout_structure_id).id
+    self.bounties = Result.find_all_by_tournament_id_and_bounty_collector_id(tournament.id, player.id).size
+    case place.to_s
+    when "1"
+      self.money_won = tournament.num_entrants * 25 * 0.5
+    when "2"
+      self.money_won = tournament.num_entrants * 25 * 0.3
+    when "3"
+      self.money_won = tournament.num_entrants * 25 * 0.2
+    end
   end
   
   def after_save

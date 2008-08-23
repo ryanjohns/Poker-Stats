@@ -4,7 +4,7 @@ class MergeBountiesWithResults < ActiveRecord::Migration
     add_column :results, :bounty_collector_id, :integer
     add_column :results, :tournament_id, :integer
     add_column :tournaments, :payout_structure_id, :integer
-    add_column :payout_structures, :series_id, :integer
+    add_column :payout_structures, :series_ids, :string
   end
 
   def self.down
@@ -15,6 +15,6 @@ class MergeBountiesWithResults < ActiveRecord::Migration
     remove_column :results, :bounty_collector_id
     remove_column :results, :tournament_id
     remove_column :tournaments, :payout_structure_id
-    remove_column :payout_structures, :series_id
+    remove_column :payout_structures, :series_ids
   end
 end

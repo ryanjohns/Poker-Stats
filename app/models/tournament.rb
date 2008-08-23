@@ -13,7 +13,7 @@ class Tournament < ActiveRecord::Base
   end
   
   def num_entrants=(value)
-    self.payout_structure_id = (PayoutStructure.find_by_num_players_and_series_id(value, series_id).id rescue nil)
+    self.payout_structure_id = (PayoutStructure.find_by_num_players_and_series_id(@num_entrants_attr, series_id).id rescue nil)
     self.payout_structure = nil
     @num_entrants_attr = value
   end

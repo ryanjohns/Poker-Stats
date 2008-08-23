@@ -1,7 +1,8 @@
 class CreatePayoutStructures < ActiveRecord::Migration
   def self.up
     create_table :payout_structures do |t|
-      t.column :num_players, :integer
+      t.column :min_players, :integer
+      t.column :max_players, :integer
     end
   end
 
