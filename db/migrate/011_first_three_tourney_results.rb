@@ -22,7 +22,7 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     
     t = Tournament.create!(:series=>series, :tournament_date=>Date.new(2008, 7, 30), :num_entrants=>12)
     
-    andrea_smith = Player.create!(:first_name=>"Andrea", :last_name=>"Smith")
+    andria_smith = Player.create!(:first_name=>"Andria", :last_name=>"Smith")
     eric_tipton = Player.create!(:first_name=>"Eric", :last_name=>"Tipton")
     Result.create!(:tournament=>t, :player=>andrea_smith, :place=>12, :bounty_collector=>eric_tipton, :fee_paid=>true)
     
