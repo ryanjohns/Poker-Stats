@@ -8,7 +8,7 @@
 <h2><%= @tournament.series.name %>: <%= @tournament.tournament_date.strftime "%B %e, %Y" %></h2>
 <div class='div_stats'>
 	Entrants: <%= @results.nitems %><br/>
-	Total prize pool: <%= number_to_currency @results.sum { |result| result.payout.money }%><br/>
+	Total prize pool: <%= number_to_currency @results.sum { |result| result.money_won }%><br/>
 </div>
 <br/>
 <div class='div_results'>
@@ -28,7 +28,7 @@
   			<td><%= result.payout.place.ordinalize %></td>
   			<td class='name-column'><%= player_link result.player %></td>
   			<td><%= result.payout.points %></td>
-  			<td><%= number_to_currency result.payout.money %></td>
+  			<td><%= number_to_currency result.money_won %></td>
   			<td><%= result.bounties %></td>
   			<td class='name-column'><%= player_link(result.bounty_collector_id) rescue "" %></td>
   			<td><%= result.fee_paid? ? "Yes" : "No" %></td>

@@ -80,7 +80,7 @@ class Result < ActiveRecord::Base
       bounty_stats.update_stats
     end
     
-    #now update this player's stats
+    # now update this player's stats
     stats = PlayerStat.find_or_create_by_player_id_and_series_id(player_id, tournament.series_id)
     stats.update_stats
     

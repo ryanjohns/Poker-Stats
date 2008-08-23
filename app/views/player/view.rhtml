@@ -23,7 +23,7 @@
     			<td class='name-column'><%= tournament_link result.tournament %></td>
     			<td><%= result.payout.place.ordinalize %></td>
     			<td><%= result.payout.points %></td>
-    			<td><%= number_to_currency result.payout.money %></td>
+    			<td><%= number_to_currency result.money_won %></td>
     			<td class='name-column'><%= player_link result.bounty_collector_id rescue "" %></td>
     			<td><%= result.bounties %></td>
     			<td><%= result.fee_paid? ? "Yes" : "No" %></td>
