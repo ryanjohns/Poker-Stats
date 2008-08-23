@@ -58,3 +58,6 @@ end
 # Mime::Type.register "application/x-mobile", :mobile
 
 # Include your application configuration below
+if RAILS_ENV == 'production'
+  Dir.glob(RAILS_ROOT + '/app/models/*.rb').each {|m| require File.basename(m)}
+end
