@@ -2,8 +2,8 @@ body {
   font-family: sans-serif;
   font-size: 12px;
   background: #eee;
-	margin: 0px;
-	padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 img {
@@ -76,8 +76,8 @@ div#footer img {
 table.table_results {
   border-collapse: separate;
   border-spacing: 2px;
-	background: #eee;
-	text-align: center;
+  background: #eee;
+  text-align: center;
 }
 
 table.table_results th {
@@ -104,10 +104,10 @@ table.table_results td {
 }
 
 td a, td a:visited  { 
-	color: #000;
-	text-decoration: underline; 
+  color: #000;
+  text-decoration: underline; 
 }
 
 td a:hover { 
-	color: #fff; 
+  color: #fff; 
 }
