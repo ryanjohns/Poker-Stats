@@ -2,7 +2,8 @@ class SeasonOneResults < ActiveRecord::Migration
   
   def self.up
         
-    season1 = Series.find(:first, :conditions => 'name = "Season 2"')    
+    season1 = Series.find(:first, :conditions => 'name = "Season 1"')
+    season2 = Series.find(:first, :conditions => 'name = "Season 2"')    
         
     # Payout Structures
     # 3-5 players
