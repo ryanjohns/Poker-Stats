@@ -445,7 +445,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@ronnie_morone, :place=>8, :bounty_collector=>@brandon_scoggins, :fee_paid=>false)
     Result.create!(:tournament=>t, :player=>@brandon_scoggins, :place=>7, :bounty_collector=>@steve_radulovich, :fee_paid=>false)
     Result.create!(:tournament=>t, :player=>@steve_radulovich, :place=>6, :bounty_collector=>@andrew_moreno, :fee_paid=>false)
-    Result.create!(:tournament=>t, :player=>@andrew_moreno, :place=>5, :bounty_collector=>@bethan_cermak, :fee_paid=>true)
+    Result.create!(:tournament=>t, :player=>@andrew_moreno, :place=>5, :bounty_collector=>@bethany_cermak, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@bethany_cermak, :place=>4, :bounty_collector=>@eric_tipton, :fee_paid=>false)
     Result.create!(:tournament=>t, :player=>@eric_tipton, :place=>3, :bounty_collector=>@brian_fidler, :fee_paid=>false)
     Result.create!(:tournament=>t, :player=>@brian_fidler, :place=>2, :bounty_collector=>@kristy_arnett, :fee_paid=>true)
