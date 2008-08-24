@@ -15,12 +15,9 @@ class Result < ActiveRecord::Base
   validates_each :bounty_collector do |record, attr, value|
     if record.place == 1
       if !value.nil?
-        puts value.name
-        puts record.tournament.tournament_date
-        puts record.player.name
         record.errors.add(attr, "must be empty if place is 1")
       end
-    elsif value.nil?
+    elsif value.nil? and record.tournament.tournament_date >= Date.new(2007, 3, 21) # bounties weren't tracked before this date
       record.errors.add(attr, "must be set if place is not 1")
     end
   end

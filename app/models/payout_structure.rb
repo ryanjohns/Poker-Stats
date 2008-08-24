@@ -21,11 +21,11 @@ class PayoutStructure < ActiveRecord::Base
   
   class << self
     def find_all_by_series_id(s_id)
-      find(:all, :conditions=>["series_ids like ? or series_ids like ? or series_ids like ?", "#{s_id}", "#{s_id},%", "%,#{s_id},%"])
+      find(:all, :conditions=>["series_ids = ? or series_ids like ? or series_ids like ? or series_ids like ?", "#{s_id}", "#{s_id},%", "%,#{s_id},%", "%,#{s_id}"])
     end
     
     def find_by_num_players_and_series_id(n_players, s_id)
-      find(:first, :conditions=>["(series_ids like ? or series_ids like ? or series_ids like ?) and ? between min_players and max_players",  "#{s_id}", "#{s_id},%", "%,#{s_id},%", n_players])
+      find(:first, :conditions=>["(series_ids = ? or series_ids like ? or series_ids like ? or series_ids like ?) and ? between min_players and max_players",  "#{s_id}", "#{s_id},%", "%,#{s_id},%", "%,#{s_id}", n_players])
     end
   end
   
@@ -92,6 +92,8 @@ class PayoutStructure < ActiveRecord::Base
       write_attribute(:series_ids, ids.sub("#{val},", ""))
     elsif ids =~ /^#{val}$/
       write_attribute(:series_ids, ids.sub("#{val}", ""))
+    elsif ids =~ /,#{val}$/
+      write_attribute(:series_ids, ids.sub(",#{val}", ""))
     end
     series_ids
   end

@@ -170,7 +170,7 @@ class FirstTwoSeasonsResults < ActiveRecord::Migration
     # Week 1
     t = Tournament.create!(:series=>season1, :tournament_date=>season1.start_date, :num_entrants=>6)
     
-    Result.create!(:tournament=>t, :player=>@bob_pajich, :place=>6, :bounty_collector=>@justin_marchand, :fee_paid=>true)
+    Result.create!(:tournament=>t, :player=>@bob_pajich, :place=>6, :fee_paid=>true)
   end
   
   def self.down
