@@ -14,7 +14,11 @@ class Series < ActiveRecord::Base
   def destroy
     payout_structures.each do |ps|
       ps.remove_series_id(self.id)
-      ps.destroy if ps.series_ids.empty?
+      if ps.series_ids.empty?
+        ps.destroy
+      else
+        ps.save!
+      end
     end
     super
   end

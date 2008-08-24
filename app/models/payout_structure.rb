@@ -46,6 +46,14 @@ class PayoutStructure < ActiveRecord::Base
     @series_attr = arr
   end
   
+  def add_series(val)
+    add_series_id(val.id)
+  end
+  
+  def remove_series(val)
+    remove_series_id(val.id)
+  end
+  
   def series_ids=(val)
     Array(val).each do |id|
       add_series_id(id)
