@@ -9,7 +9,7 @@ class SeasonTwoResults < ActiveRecord::Migration
     names2 = "Justin Marchand, Konan Luce, Mary Hurbi, Paul Wilhelm, Michael Friedman, Megan Cork, Randy Watters, Sherry Pinder, Theo Tran"
     names3 = "Jamie Wilhelm, Seth Niesen, Lara Miller, Mark Pinder, Shannon Watters, Ryan VanWinkle, Alex G(I), Chris Hinkel, Tim M, Dustin Fremion"
     names4 = "Raphael (I), Alex P(I), Scott M(I), Blake Levario, Chris P(I), Sharad (I), Cameron (I), James B, Ryan Lucchesi, Joe Hulbert"
-    names5 = "Tony DeSylva, Brittany Giacoletto, Ryan C(I), Josh Unknown, Paola Rodriguez"
+    names5 = "Tony DeSylva, Brittany Giacoletto, Ryan C(I), Josh Unknown, Paola Rodriguez, Dustin Fremion"
     [names1, names2, names3, names4, names5].join(", ").split(", ").each do |name|
       arr = name.split(" ")
       Player.find_or_create_by_first_name_and_last_name(arr[0], arr[1])
@@ -75,25 +75,24 @@ class SeasonTwoResults < ActiveRecord::Migration
     
     # Week 4
     t = Tournament.create!(:series => series, :tournament_date => Date.new(2008, 2, 27), :num_entrants => 11)
-    Result.create!(:tournament => t, :player => @shawn_green, :place => 1, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @kristy_arnett, :place => 2, :bounty_collector => @shawn_green, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @bethany_cermak, :place => 3, :bounty_collector => @kristy_arnett, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @ronnie_morone, :place => 4, :bounty_collector => @kristy_arnett, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @brian_fidler, :place => 5, :bounty_collector => @kristy_arnett, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @mark_schmitz, :place => 6, :bounty_collector => @ronnie_morone, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @andrew_moreno, :place => 7, :bounty_collector => @mark_schmitz, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @tony_moreno, :place => 8, :bounty_collector => @ronnie_morone, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @john_grinzivich, :place => 9, :bounty_collector => @ronnie_morone, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @dave_wilmert, :place => 10, :bounty_collector => @kristy_arnett, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @julio_rodriguez, :place => 11, :bounty_collector => @kristy_arnett, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @eric_tipton, :place => 12, :bounty_collector => @julio_rodriguez, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @eric_tipton, :place => 1, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @morgan_kise, :place => 2, :bounty_collector => @eric_tipton, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @shawn_green, :place => 3, :bounty_collector => @morgan_kise, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @bethany_cermak, :place => 4, :bounty_collector => @shawn_green, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @rich_belsky, :place => 5, :bounty_collector => @shawn_green, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @tony_moreno, :place => 6, :bounty_collector => @rich_belsky, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @kristy_arnett, :place => 7, :bounty_collector => @shawn_green, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @brian_fidler, :place => 8, :bounty_collector => @eric_tipton, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @john_grinzivich, :place => 9, :bounty_collector => @rich_belsky, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @dave_wilmert, :place => 10, :bounty_collector => @shawn_green, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @scott_dedoes, :place => 11, :bounty_collector => @shawn_green, :fee_paid => true)
     
     # Week 5
     t = Tournament.create!(:series => series, :tournament_date => Date.new(2008, 3, 5), :num_entrants => 14)
     Result.create!(:tournament => t, :player => @mark_schmitz, :place => 1, :fee_paid => true)
     Result.create!(:tournament => t, :player => @bethany_cermak, :place => 2, :bounty_collector => @mark_schmitz, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @chris_hinkel, :place => 3, :bounty_collector => @mark_schmitz, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @john_grinzivich, :place => 4, :bounty_collector => @chris_hinkel, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @dustin_fremion, :place => 3, :bounty_collector => @mark_schmitz, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @john_grinzivich, :place => 4, :bounty_collector => @dustin_fremion, :fee_paid => true)
     Result.create!(:tournament => t, :player => @rich_belsky, :place => 5, :bounty_collector => @mark_schmitz, :fee_paid => true)
     Result.create!(:tournament => t, :player => @kristy_arnett, :place => 6, :bounty_collector => @mark_schmitz, :fee_paid => true)
     Result.create!(:tournament => t, :player => @shawn_green, :place => 7, :bounty_collector => @mark_schmitz, :fee_paid => true)
