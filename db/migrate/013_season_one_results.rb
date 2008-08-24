@@ -2,12 +2,6 @@ class SeasonOneResults < ActiveRecord::Migration
   
   def self.up
     
-    season1 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 1", Date.new(2007, 7, 18), true)
-    season2 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 2", Date.new(2008, 2, 6), true)
-    
-    season1.destroy
-    season2.destroy
-    
     # Seasons
     season1 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 1", Date.new(2007, 7, 18), true)
     season2 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 2", Date.new(2008, 2, 6), true)
