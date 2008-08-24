@@ -77,13 +77,13 @@ class Result < ActiveRecord::Base
     # update bounties for bounty_collector
     if bounty_collector_id
       bounty_stats = PlayerStat.find_or_create_by_player_id_and_series_id(bounty_collector_id, tournament.series_id)
-      bounty_stats.update_stats
+      bounty_stats.update_stats(tournament.series_id)
     end
     
     # now update this player's stats
     stats = PlayerStat.find_or_create_by_player_id_and_series_id(player_id, tournament.series_id)
     stats.update_stats
     
-    PlayerStat.rank_all_stats
+    PlayerStat.rank_all_stats(tournament.series_id)
   end
 end

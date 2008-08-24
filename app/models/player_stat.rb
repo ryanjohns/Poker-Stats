@@ -8,19 +8,29 @@ class PlayerStat < ActiveRecord::Base
   validates_presence_of :total_buy_ins, :num_firsts, :num_cashes, :num_bounties, :avg_finish, :num_fees, :percent_cash
   
   class << self
-    def update_all_stats
-      find(:all).each do |ps|
+    def update_all_stats(series_id=0)
+      recs = find(:all) if series_id == 0
+      recs ||= find_all_by_series_id(series_id)
+      recs.each do |ps|
         ps.update_stats
       end
-      rank_all_stats
+      rank_all_stats(series_id)
     end
     
-    def rank_all_stats
-      rank = 1
-      find(:all, :order=>"top_ten_points desc, roi desc, total_points desc, avg_finish asc, num_played desc").each do |ps|
-        ps.rank = rank
-        ps.save!
-        rank += 1
+    def rank_all_stats(series_id=0)
+      series = [series_id]
+      if series_id == 0
+        series = Series.find(:all).collect{|s| s.id}
+      end
+      series.each do |s_id|
+        rank = 1
+        order = "top_ten_points desc, roi desc, total_points desc, avg_finish asc, num_played desc"
+        recs = find_all_by_series_id(s, :order=>order)
+        recs.each do |ps|
+          ps.rank = rank
+          ps.save!
+          rank += 1
+        end
       end
     end
   end
