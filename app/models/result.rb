@@ -17,7 +17,7 @@ class Result < ActiveRecord::Base
       if !value.nil?
         record.errors.add(attr, "must be empty if place is 1")
       end
-    elsif value.nil? and record.tournament.tournament_date >= Date.new(2007, 3, 21) # bounties weren't tracked before this date
+    elsif value.nil?
       record.errors.add(attr, "must be set if place is not 1")
     end
   end
