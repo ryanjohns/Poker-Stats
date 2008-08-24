@@ -1,8 +1,8 @@
 class CreateStructures < ActiveRecord::Migration
   def self.up
-    series = Series.create(:name =>'Season 3', :start_date => DateTime.parse("07/30/2008"))
-    Series.create(:name =>'Season 2', :start_date => DateTime.parse("02/06/2008"), :is_complete => true)
     Series.create(:name =>'Season 1', :start_date => DateTime.parse("07/18/2007"), :is_complete => true)
+    Series.create(:name =>'Season 2', :start_date => DateTime.parse("02/06/2008"), :is_complete => true)
+    series = Series.create(:name =>'Season 3', :start_date => DateTime.parse("07/30/2008"))
     
     # 3-5 players
     ps = PayoutStructure.create!(:min_players=>3, :max_players=>5, :series=>series)
