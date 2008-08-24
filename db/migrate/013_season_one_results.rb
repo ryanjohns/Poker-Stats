@@ -5,6 +5,13 @@ class SeasonOneResults < ActiveRecord::Migration
     # Seasons
     season1 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 1", Date.new(2007, 7, 18), true)
     season2 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 2", Date.new(2008, 2, 6), true)
+    
+    season1.destroy
+    season2.destroy
+    
+    # Seasons
+    season1 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 1", Date.new(2007, 7, 18), true)
+    season2 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 2", Date.new(2008, 2, 6), true)
         
     # Payout Structures
     # 3-5 players
@@ -149,7 +156,7 @@ class SeasonOneResults < ActiveRecord::Migration
     names2 = "Justin Marchand, Konan Luce, Mary Hurbi, Paul Wilhelm, Michael Friedman, Megan Cork, Randy Watters, Sherry Pinder, Theo Tran"
     names3 = "Jamie Wilhelm, Seth Niesen, Lara Miller, Mark Pinder, Shannon Watters, Ryan VanWinkle, Alex G(I), Chris Hinkel, Tim M, Dustin Fremion"
     names4 = "Raphael (I), Alex P(I), Scott M(I), Blake Levario, Chris P(I), Sharad (I), Cameron (I), James B, Ryan Lucchesi, Joe Hulbert"
-    names5 = "Tony DeSylva, Brittany Giacolletto, Ryan C(I), Josh Unknown"
+    names5 = "Tony DeSylva, Brittany Giacolletto, Ryan C(I), Josh Unknown, Paola Rodriguez"
     [names1, names2, names3, names4, names5].join(", ").split(", ").each do |name|
       arr = name.split(" ")
       Player.find_or_create_by_first_name_and_last_name(arr[0], arr[1])
