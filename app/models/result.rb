@@ -66,8 +66,14 @@ class Result < ActiveRecord::Base
     case place.to_s
     when "1"
       self.money_won = tournament.num_entrants * 25 * 0.5
+      if !(self.money_won % 5 == 0)
+        self.money_won += 2.5
+      end
     when "2"
       self.money_won = tournament.num_entrants * 25 * 0.3
+      if !(self.money_won % 5 == 0)
+        self.money_won -= 2.5
+      end
     when "3"
       self.money_won = tournament.num_entrants * 25 * 0.2
     end
@@ -77,13 +83,13 @@ class Result < ActiveRecord::Base
     # update bounties for bounty_collector
     if bounty_collector_id
       bounty_stats = PlayerStat.find_or_create_by_player_id_and_series_id(bounty_collector_id, tournament.series_id)
-      bounty_stats.update_stats(tournament.series_id)
+      bounty_stats.update_stats
     end
     
     # now update this player's stats
     stats = PlayerStat.find_or_create_by_player_id_and_series_id(player_id, tournament.series_id)
     stats.update_stats
     
-    PlayerStat.rank_all_stats(tournament.series_id)
+    PlayerStat.rank_all_stats
   end
 end

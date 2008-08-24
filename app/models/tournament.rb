@@ -12,15 +12,8 @@ class Tournament < ActiveRecord::Base
     end
   end
   
-  def num_entrants=(value)
-    self.payout_structure_id = (PayoutStructure.find_by_num_players_and_series_id(@num_entrants_attr, series_id).id rescue nil)
-    self.payout_structure = nil
-    @num_entrants_attr = value
-  end
-  
   def num_entrants
-    return @num_entrants_attr if @num_entrants_attr
-    @num_entrants_attr = (payout_structure.num_players rescue nil)
+    self.results.nitems
   end
   
   def before_save
