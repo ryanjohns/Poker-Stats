@@ -1,7 +1,7 @@
 class TournamentController < ApplicationController
   
   def index
-    @series = Series.find(:all)
+    @series = Series.find(:all, :order => 'start_date DESC')
     
     @tournaments = []
     @series.each do |series|
