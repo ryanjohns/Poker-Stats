@@ -25,7 +25,7 @@ class PlayerStat < ActiveRecord::Base
       series.each do |s_id|
         rank = 1
         order = "top_ten_points desc, roi desc, total_points desc, avg_finish asc, num_played desc"
-        recs = find_all_by_series_id(s, :order=>order)
+        recs = find_all_by_series_id(s_id, :order=>order)
         recs.each do |ps|
           ps.rank = rank
           ps.save!
