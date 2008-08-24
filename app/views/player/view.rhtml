@@ -18,7 +18,7 @@
   			<th>Fee Paid?</th>
   		</tr>
 		
-  		<% series_results.each do |result| %>
+  		<% series_results.reverse.each do |result| %>
     		<tr class="<%= cycle('even', 'odd') %>">
     			<td class='name-column'><%= tournament_link result.tournament %></td>
     			<td><%= result.payout.place.ordinalize %></td>
