@@ -3,6 +3,7 @@ class CreateSeries < ActiveRecord::Migration
     create_table :series do |t|
       t.column :name, :string
       t.column :is_complete, :boolean, :default => false
+      t.column :start_date, :datetime, :null => false
     end
   end
 
