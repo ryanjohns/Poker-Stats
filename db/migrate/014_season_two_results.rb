@@ -476,7 +476,8 @@ class SeasonTwoResults < ActiveRecord::Migration
   end
   
   def self.down
-    Tournament.find(:all).each do |tournament|
+    series = Series.find(:first, :conditions => 'name = "Season 2"')
+    series.tournaments.each do |tournament|
       tournament.destroy
     end
   end
