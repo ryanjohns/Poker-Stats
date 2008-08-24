@@ -1,0 +1,9 @@
+<% title('Series') %>
+<h2>Series</h2>
+<div>
+  <ul>
+    <% @series.each do |series| %>
+			<li><%= series_link series %><%= if !series.is_complete? then " (current)" end %></li>
+		<% end %>
+	</ul>
+</div>

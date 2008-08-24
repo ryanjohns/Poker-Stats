@@ -17,6 +17,10 @@ module ApplicationHelper
     link_to(Tournament.find(id).tournament_date.strftime("%B %e, %Y"), :controller => 'tournament', :action => 'view', :id => id)
   end
   
+  def series_link(id)
+    link_to(Series.find(id).name, :controller => 'series', :action => 'view', :id => id)
+  end
+  
   def title(page_title)
     content_for(:title) { page_title }
   end

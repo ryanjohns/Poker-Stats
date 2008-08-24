@@ -5,7 +5,7 @@ class TournamentController < ApplicationController
     
     @tournaments = []
     @series.each do |series|
-      @tournaments[series.id] = Tournament.find_all_by_series_id(series.id)
+      @tournaments[series.id] = Tournament.find_all_by_series_id(series.id, :order => 'tournament_date DESC')
     end
     
   end
