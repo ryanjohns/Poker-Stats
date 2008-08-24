@@ -6,7 +6,7 @@ class Result < ActiveRecord::Base
   
   attr_reader :place_attr
   attr_reader :bounty_collector_attr
-  validates_presence_of :player_id, :tournament_id, :fee_paid
+  validates_presence_of :player_id, :tournament_id
   validates_each :place do |record, attr, value|
     if !value.is_a? Fixnum or value <= 0
       record.errors.add(attr, "must be a positive integer")
