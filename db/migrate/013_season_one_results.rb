@@ -1,17 +1,6 @@
 class SeasonOneResults < ActiveRecord::Migration
   
   def self.up
-    
-    # Seasons
-    season1 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 1", Date.new(2007, 7, 18), true)
-    season2 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 2", Date.new(2008, 2, 6), true)
-    
-    season1.destroy
-    season2.destroy
-    
-    # Seasons
-    season1 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 1", Date.new(2007, 7, 18), true)
-    season2 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 2", Date.new(2008, 2, 6), true)
         
     # Payout Structures
     # 3-5 players
@@ -186,7 +175,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@bob_pajich, :place=>1, :fee_paid=>true)
   
     # Week 2
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 7, 25), :num_entrants=>15)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 7, 25), :num_entrants=>15)
     
     Result.create!(:tournament=>t, :player=>@bob_pajich, :place=>15, :bounty_collector=>@steve_radulovich, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@shannon_watters, :place=>14, :bounty_collector=>@steve_radulovich, :fee_paid=>true)
@@ -205,7 +194,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@bethany_cermak, :place=>1, :fee_paid=>true)
     
     # Week 3
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 8, 1), :num_entrants=>16)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 8, 1), :num_entrants=>16)
     
     Result.create!(:tournament=>t, :player=>@lizzy_morone, :place=>16, :bounty_collector=>@justin_marchand, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@eric_tipton, :place=>15, :bounty_collector=>@scott_dedoes, :fee_paid=>true)
@@ -225,7 +214,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@brandon_scoggins, :place=>1, :fee_paid=>true)
     
     # Week 4
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 8, 8), :num_entrants=>16)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 8, 8), :num_entrants=>16)
     
     Result.create!(:tournament=>t, :player=>@mark_pinder, :place=>16, :bounty_collector=>@eric_tipton, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@andrew_moreno, :place=>15, :bounty_collector=>@sherry_pinder, :fee_paid=>true)
@@ -245,7 +234,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@scott_dedoes, :place=>1, :fee_paid=>true)
     
     # Week 5
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 8, 15), :num_entrants=>15)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 8, 15), :num_entrants=>15)
     
     Result.create!(:tournament=>t, :player=>@brandon_scoggins, :place=>15, :bounty_collector=>@rich_belsky, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@jamie_wilhelm, :place=>14, :bounty_collector=>@ryan_mcguire, :fee_paid=>true)
@@ -264,7 +253,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@john_grinzivich, :place=>1, :fee_paid=>true)
   
     # Week 6
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 8, 22), :num_entrants=>22)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 8, 22), :num_entrants=>22)
     
     Result.create!(:tournament=>t, :player=>@jamie_wilhelm, :place=>22, :bounty_collector=>@justin_marchand, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@morgan_kise, :place=>21, :bounty_collector=>@justin_marchand, :fee_paid=>true)
@@ -290,7 +279,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@tim_resnik, :place=>1, :fee_paid=>true)
   
     # Week 7
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 8, 29), :num_entrants=>9)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 8, 29), :num_entrants=>9)
     
     Result.create!(:tournament=>t, :player=>@scott_dedoes, :place=>9, :bounty_collector=>@eric_tipton, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@mark_schmitz, :place=>8, :bounty_collector=>@lizzy_morone, :fee_paid=>true)
@@ -303,7 +292,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@john_grinzivich, :place=>1, :fee_paid=>true)
   
     # Week 8
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 9, 5), :num_entrants=>12)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 9, 5), :num_entrants=>12)
 
     Result.create!(:tournament=>t, :player=>@lizzy_morone, :place=>12, :bounty_collector=>@rich_belsky, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@shawn_green, :place=>11, :bounty_collector=>@ronnie_morone, :fee_paid=>true)
@@ -319,7 +308,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@rich_belsky, :place=>1, :fee_paid=>true)
   
     # Week 9
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 9, 12), :num_entrants=>11)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 9, 12), :num_entrants=>11)
 
     Result.create!(:tournament=>t, :player=>@lizzy_morone, :place=>11, :bounty_collector=>@john_grinzivich, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@mark_schmitz, :place=>10, :bounty_collector=>@eric_tipton, :fee_paid=>true)    
@@ -334,7 +323,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@shawn_green, :place=>1, :fee_paid=>true)
   
     # Week 10
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 9, 19), :num_entrants=>13)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 9, 19), :num_entrants=>13)
 
     Result.create!(:tournament=>t, :player=>@eric_tipton, :place=>13, :bounty_collector=>@steve_radulovich, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@john_grinzivich, :place=>12, :bounty_collector=>@ronnie_morone, :fee_paid=>true)
@@ -351,7 +340,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@scott_dedoes, :place=>1, :fee_paid=>true)
   
     # Week 11
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 9, 26), :num_entrants=>16)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 9, 26), :num_entrants=>16)
 
     Result.create!(:tournament=>t, :player=>@brandon_scoggins, :place=>16, :bounty_collector=>@bethany_cermak, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@ronnie_morone, :place=>15, :bounty_collector=>@micah_thomas, :fee_paid=>true)
@@ -371,7 +360,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@eric_tipton, :place=>1, :fee_paid=>true)
   
     # Week 12
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 10, 3), :num_entrants=>16)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 10, 3), :num_entrants=>16)
 
     Result.create!(:tournament=>t, :player=>@scott_dedoes, :place=>16, :bounty_collector=>@eric_tipton, :fee_paid=>false)
     Result.create!(:tournament=>t, :player=>@mark_schmitz, :place=>15, :bounty_collector=>@tim_resnik, :fee_paid=>false)
@@ -391,7 +380,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@bethany_cermak, :place=>1, :fee_paid=>true)
   
     # Week 13
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 10, 10), :num_entrants=>11)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 10, 10), :num_entrants=>11)
 
     Result.create!(:tournament=>t, :player=>@eric_tipton, :place=>11, :bounty_collector=>@lizzy_morone, :fee_paid=>false)
     Result.create!(:tournament=>t, :player=>@shawn_green, :place=>10, :bounty_collector=>@scott_dedoes, :fee_paid=>false)    
@@ -406,7 +395,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@scott_dedoes, :place=>1, :fee_paid=>false)
   
     # Week 14
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 10, 17), :num_entrants=>16)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 10, 17), :num_entrants=>16)
 
     Result.create!(:tournament=>t, :player=>@micah_thomas, :place=>16, :bounty_collector=>@lara_miller, :fee_paid=>true)
     Result.create!(:tournament=>t, :player=>@mark_schmitz, :place=>15, :bounty_collector=>@theo_tran, :fee_paid=>false)
@@ -426,7 +415,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@shawn_green, :place=>1, :fee_paid=>false)
   
     # Week 15
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 10, 24), :num_entrants=>10)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 10, 24), :num_entrants=>10)
 
     Result.create!(:tournament=>t, :player=>@bethany_cermak, :place=>10, :bounty_collector=>@brandon_scoggins, :fee_paid=>true)    
     Result.create!(:tournament=>t, :player=>@shawn_green, :place=>9, :bounty_collector=>@john_grinzivich, :fee_paid=>false)
@@ -440,7 +429,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@micah_thomas, :place=>1, :fee_paid=>true)
   
     # Week 16 - bounties missing this week
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 11, 7), :num_entrants=>15)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 11, 7), :num_entrants=>15)
 
     Result.create!(:tournament=>t, :player=>@rich_belsky, :place=>15, :bounty_collector=>@mark_schmitz, :fee_paid=>false)    
     Result.create!(:tournament=>t, :player=>@mark_schmitz, :place=>14, :bounty_collector=>@shawn_green, :fee_paid=>false)    
@@ -459,7 +448,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@kristy_arnett, :place=>1, :fee_paid=>true)
     
     # Week 17
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 11, 14), :num_entrants=>18)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 11, 14), :num_entrants=>18)
 
     Result.create!(:tournament=>t, :player=>@micah_thomas, :place=>18, :bounty_collector=>@rich_belsky, :fee_paid=>false)    
     Result.create!(:tournament=>t, :player=>@todd_alexander, :place=>17, :bounty_collector=>@andrew_moreno, :fee_paid=>true)    
@@ -481,7 +470,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@kristy_arnett, :place=>1, :fee_paid=>true)
   
     # Week 18
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 11, 28), :num_entrants=>17)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 11, 28), :num_entrants=>17)
 
     Result.create!(:tournament=>t, :player=>@rich_belsky, :place=>17, :bounty_collector=>@scott_dedoes, :fee_paid=>false)    
     Result.create!(:tournament=>t, :player=>@scott_dedoes, :place=>16, :bounty_collector=>@andrew_moreno, :fee_paid=>false)    
@@ -502,7 +491,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@kristy_arnett, :place=>1, :fee_paid=>true)
 
     # Week 19
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 12, 5), :num_entrants=>14)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 12, 5), :num_entrants=>14)
 
     Result.create!(:tournament=>t, :player=>@micah_thomas, :place=>14, :bounty_collector=>@eric_tipton, :fee_paid=>false)    
     Result.create!(:tournament=>t, :player=>@shawn_green, :place=>13, :bounty_collector=>@eric_tipton, :fee_paid=>false)    
@@ -520,7 +509,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@tony_moreno, :place=>1, :fee_paid=>true)
   
     # Week 20
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 12, 12), :num_entrants=>15)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 12, 12), :num_entrants=>15)
 
     Result.create!(:tournament=>t, :player=>@micah_thomas, :place=>15, :bounty_collector=>@dave_wilmert, :fee_paid=>false)    
     Result.create!(:tournament=>t, :player=>@ronnie_morone, :place=>14, :bounty_collector=>@dave_wilmert, :fee_paid=>false)    
@@ -539,7 +528,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@brian_fidler, :place=>1, :fee_paid=>true)
   
     # Week 21
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 12, 19), :num_entrants=>14)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2007, 12, 19), :num_entrants=>14)
 
     Result.create!(:tournament=>t, :player=>@shawn_green, :place=>14, :bounty_collector=>@ronnie_morone, :fee_paid=>false)    
     Result.create!(:tournament=>t, :player=>@brian_fidler, :place=>13, :bounty_collector=>@steve_radulovich, :fee_paid=>true)    
@@ -617,7 +606,7 @@ class SeasonOneResults < ActiveRecord::Migration
   def self.down
     # Seasons
     season1 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 1", Date.new(2007, 7, 18), true)
-    season2 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 2", Date.new(2008, 2, 6), true)
+    season2 = Series.find_or_create_by_name_and_start_date_and_is_complete("Season 2", Date.new(2007, 2, 6), true)
     
     season1.destroy
     season2.destroy
