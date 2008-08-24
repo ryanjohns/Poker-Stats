@@ -21,5 +21,11 @@ class SeriesController < ApplicationController
     @player_stats = PlayerStat.find(:all, :include=>:player, :conditions => "series_id = #{@series.id} and rank > 0", :order => order_sql) rescue []
   end
   
+  def current
+    params[:id] = series_id = Series.find(:first, :conditions => 'is_complete = false').id
+    view
+    render :action => 'view'
+  end
+  
   
 end
