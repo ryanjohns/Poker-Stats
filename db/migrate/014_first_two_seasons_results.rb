@@ -163,14 +163,14 @@ class FirstTwoSeasonsResults < ActiveRecord::Migration
     
     # create easy-to-use variables
     Player.find(:all).each do |player|
-      eval(player.name(:variablize=>true)+"=player")
+      eval("@"+player.name(:variablize=>true)+"=player")
     end
     
     # Season 1
     # Week 1
-    t = Tournament.create!(:series=>season1, :tournament_date=>season1.start_date, :num_players=>6)
+    t = Tournament.create!(:series=>season1, :tournament_date=>season1.start_date, :num_entrants=>6)
     
-    Result.create!(:player=>bob_pajich, :place=>6, :bounty_collector=>justin_marshand, :fee_paid=>true)
+    Result.create!(:tournament=>t, :player=>@bob_pajich, :place=>6, :bounty_collector=>@justin_marchand, :fee_paid=>true)
   end
   
   def self.down
