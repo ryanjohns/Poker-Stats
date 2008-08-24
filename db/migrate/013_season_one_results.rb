@@ -2,6 +2,8 @@ class SeasonOneResults < ActiveRecord::Migration
   
   def self.up
         
+    season1 = Series.find(:first, :conditions => 'name = "Season 2"')    
+        
     # Payout Structures
     # 3-5 players
     ps = PayoutStructure.create!(:min_players=>3, :max_players=>5, :series=>season1)
