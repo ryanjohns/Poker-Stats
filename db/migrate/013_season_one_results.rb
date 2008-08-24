@@ -28,8 +28,8 @@ class SeasonOneResults < ActiveRecord::Migration
     # 9 players
     ps = PayoutStructure.create!(:min_players=>9, :max_players=>9, :series=>season1)
     Payout.create!(:payout_structure=>ps, :place=>1, :points=>30, :percentage => 50)
-    Payout.create!(:payout_structure=>ps, :place=>2, :points=>14, :percentage => 50)
-    Payout.create!(:payout_structure=>ps, :place=>3, :points=>7, :percentage => 50)
+    Payout.create!(:payout_structure=>ps, :place=>2, :points=>14, :percentage => 30)
+    Payout.create!(:payout_structure=>ps, :place=>3, :points=>7, :percentage => 20)
     Payout.create!(:payout_structure=>ps, :place=>4, :points=>4)
     Payout.create!(:payout_structure=>ps, :place=>5, :points=>3)
     Payout.create!(:payout_structure=>ps, :place=>6, :points=>2)
@@ -40,8 +40,8 @@ class SeasonOneResults < ActiveRecord::Migration
     # 10-13 players
     ps = PayoutStructure.create!(:min_players=>10, :max_players=>13, :series=>season1)
     Payout.create!(:payout_structure=>ps, :place=>1, :points=>35, :percentage => 50)
-    Payout.create!(:payout_structure=>ps, :place=>2, :points=>17, :percentage => 50)
-    Payout.create!(:payout_structure=>ps, :place=>3, :points=>9, :percentage => 50)
+    Payout.create!(:payout_structure=>ps, :place=>2, :points=>17, :percentage => 30)
+    Payout.create!(:payout_structure=>ps, :place=>3, :points=>9, :percentage => 20)
     Payout.create!(:payout_structure=>ps, :place=>4, :points=>5)
     Payout.create!(:payout_structure=>ps, :place=>5, :points=>4)
     Payout.create!(:payout_structure=>ps, :place=>6, :points=>3)
@@ -55,8 +55,8 @@ class SeasonOneResults < ActiveRecord::Migration
     # 14-17 players
     ps = PayoutStructure.create!(:min_players=>14, :max_players=>17, :series=>season1)
     Payout.create!(:payout_structure=>ps, :place=>1, :points=>45, :percentage => 50)
-    Payout.create!(:payout_structure=>ps, :place=>2, :points=>23, :percentage => 50)
-    Payout.create!(:payout_structure=>ps, :place=>3, :points=>12, :percentage => 50)
+    Payout.create!(:payout_structure=>ps, :place=>2, :points=>23, :percentage => 30)
+    Payout.create!(:payout_structure=>ps, :place=>3, :points=>12, :percentage => 20)
     Payout.create!(:payout_structure=>ps, :place=>4, :points=>6)
     Payout.create!(:payout_structure=>ps, :place=>5, :points=>5)
     Payout.create!(:payout_structure=>ps, :place=>6, :points=>4)
