@@ -6,6 +6,9 @@ class Result < ActiveRecord::Base
   
   attr_reader :place_attr
   attr_reader :bounty_collector_attr
+  
+  attr_accessor :update_player_stats
+  
   validates_presence_of :player_id, :tournament_id
   validates_each :place do |record, attr, value|
     if !value.is_a? Fixnum or value <= 0
@@ -20,6 +23,11 @@ class Result < ActiveRecord::Base
     elsif value.nil?
       record.errors.add(attr, "must be set if place is not 1")
     end
+  end
+  
+  def initialize(params)
+    @update_player_stats = true
+    super(params)
   end
   
   def place=(value)
@@ -71,16 +79,24 @@ class Result < ActiveRecord::Base
   end
   
   def after_save
-    # update bounties for bounty_collector
-    if bounty_collector_id
-      bounty_stats = PlayerStat.find_or_create_by_player_id_and_series_id(bounty_collector_id, tournament.series_id)
-      bounty_stats.update_stats
+    
+    player_stats = PlayerStat.find_or_create_by_player_id_and_series_id(player_id, tournament.series_id)
+    
+    if @update_player_stats
+      # update bounties for bounty_collector
+      if bounty_collector_id
+        bounty_stats = PlayerStat.find_or_create_by_player_id_and_series_id(bounty_collector_id, tournament.series_id)
+        bounty_stats.num_bounties += 1
+        bounty_stats.save!
+        bounty_result = Result.find_by_player_id_and_tournament_id(bounty_collector_id, tournament.id)
+        bounty_result.save! if bounty_result
+      end
+    
+      # now update this player's stats
+      player_stats.update_stats
+    
+      # now rank all stats
+      PlayerStat.rank_all_stats(tournament.series_id)
     end
-    
-    # now update this player's stats
-    stats = PlayerStat.find_or_create_by_player_id_and_series_id(player_id, tournament.series_id)
-    stats.update_stats
-    
-    PlayerStat.rank_all_stats
   end
 end
