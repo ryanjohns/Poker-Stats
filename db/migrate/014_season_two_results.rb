@@ -123,7 +123,7 @@ class SeasonTwoResults < ActiveRecord::Migration
     Result.create!(:tournament => t, :player => @julio_rodriguez, :place => 12, :bounty_collector => @eric_tipton, :fee_paid => true)
     Result.create!(:tournament => t, :player => @kristy_arnett, :place => 13, :bounty_collector => @rich_belsky, :fee_paid => true)
     Result.create!(:tournament => t, :player => @shawn_green, :place => 14, :bounty_collector => @kristy_arnett, :fee_paid => true)
-    Result.create!(:tournament => t, :player => @randy_watters, :place => 15, :bounty_collector => @brian_fidler, :fee_paid => true)
+    Result.create!(:tournament => t, :player => @randy_watters, :place => 15, :bounty_collector => @brian_fidler, :fee_paid => false)
     Result.create!(:tournament => t, :player => @blake_levario, :place => 16, :bounty_collector => @mark_schmitz, :fee_paid => true)
     
     # Week 8
