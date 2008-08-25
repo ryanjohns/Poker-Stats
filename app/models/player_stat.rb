@@ -4,7 +4,7 @@ class PlayerStat < ActiveRecord::Base
   belongs_to :player
   
   validates_presence_of :player_id, :series_id
-  validates_presence_of :profit, :winnings, :roi, :top_ten_points, :total_points, :avg_points, :num_played, :fees_total
+  validates_presence_of :profit, :winnings, :roi, :top_ten_points, :total_points, :avg_points, :num_played, :total_fees
   validates_presence_of :total_buy_ins, :num_firsts, :num_cashes, :num_bounties, :avg_finish, :num_fees, :percent_cash
   
   class << self
