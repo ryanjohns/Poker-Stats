@@ -59,6 +59,7 @@ end
 
 # Include your application configuration below
 if RAILS_ENV == 'production'
+  require 'application.rb'
   Dir.glob(RAILS_ROOT + '/app/models/*.rb').each {|m| require File.basename(m)}
   Dir.glob(RAILS_ROOT + '/app/controllers/*.rb').each {|c| require File.basename(c)}
 end
