@@ -604,6 +604,25 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@kristy_arnett, :place=>2, :bounty_collector=>@tony_moreno, :fee_paid=>false, :update_player_stats=>false)
     Result.create!(:tournament=>t, :player=>@tony_moreno, :place=>1, :fee_paid=>false, :update_player_stats=>false)
   
+    # Week 25
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 1, 25), :num_entrants=>15)
+
+    Result.create!(:tournament=>t, :player=>@shawn_green, :place=>15, :bounty_collector=>@justin_marchand, :fee_paid=>false, :update_player_stats=>false)    
+    Result.create!(:tournament=>t, :player=>@kristy_arnett, :place=>14, :bounty_collector=>@ronnie_morone, :fee_paid=>false, :update_player_stats=>false)    
+    Result.create!(:tournament=>t, :player=>@eric_tipton, :place=>13, :bounty_collector=>@steve_radulovich, :fee_paid=>false, :update_player_stats=>false)    
+    Result.create!(:tournament=>t, :player=>@mark_schmitz, :place=>12, :bounty_collector=>@steve_radulovich, :fee_paid=>false, :update_player_stats=>false)    
+    Result.create!(:tournament=>t, :player=>@bethany_cermak, :place=>11, :bounty_collector=>@tony_moreno, :fee_paid=>false, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@andrew_moreno, :place=>10, :bounty_collector=>@rich_belsky, :fee_paid=>false, :update_player_stats=>false)    
+    Result.create!(:tournament=>t, :player=>@ronnie_morone, :place=>9, :bounty_collector=>@scott_dedoes, :fee_paid=>false, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@justin_marchand, :place=>8, :bounty_collector=>@tony_moreno, :fee_paid=>true, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@john_grinzivich, :place=>7, :bounty_collector=>@brian_fidler, :fee_paid=>false, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@steve_radulovich, :place=>6, :bounty_collector=>@brian_fidler, :fee_paid=>false, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@morgan_kise, :place=>5, :bounty_collector=>@tony_moreno, :fee_paid=>true, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@brian_fidler, :place=>4, :bounty_collector=>@tony_moreno, :fee_paid=>false, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@scott_dedoes, :place=>3, :bounty_collector=>@tony_moreno, :fee_paid=>true, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@rich_belsky, :place=>2, :bounty_collector=>@tony_moreno, :fee_paid=>false, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>@tony_moreno, :place=>1, :fee_paid=>false, :update_player_stats=>false)
+  
     PlayerStat.update_all_stats(season1.id)
   
   end
