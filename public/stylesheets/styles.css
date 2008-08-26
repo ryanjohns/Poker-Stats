@@ -51,7 +51,7 @@ table#standings tr.even {
   background: #b0c4de;
 }
 
-table#standings tr.hover {
+table#standings tr.even:hover, table#standings tr.odd:hover {
   background: #ff6347;
 }
 

@@ -25,7 +25,7 @@
   <% item_num = 1 -%>
   <% @player_stats.each do |ps| -%>
     <% row_class = cycle('even', 'odd', :name => 'row_cycle') -%>
-	  <tr class="<%= row_class -%>" onmouseover="className='hover'" onmouseout="className='<%= row_class -%>'">
+	  <tr class="<%= row_class -%>">
 	    <td><%= item_num %>)</td>
 	    <td><%= ps.rank.ordinalize %></td>
 	    <td class="name-column"><%= player_link ps.player.id %></td>
