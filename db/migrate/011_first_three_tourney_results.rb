@@ -92,13 +92,13 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     
     Result.create!(:tournament=>t, :player=>lizzy_morone, :place=>12, :bounty_collector=>tony_moreno, :fee_paid=>true, :update_player_stats=>false)
 
-    michelle_unknown = Player.create!(:first_name=>"Michelle", :last_name=>"Unknown")
-    Result.create!(:tournament=>t, :player=>bethany_cermak, :place=>11, :bounty_collector=>michelle_unknown, :fee_paid=>true, :update_player_stats=>false)
+    michelle_heflin = Player.create!(:first_name=>"Michelle", :last_name=>"Heflin")
+    Result.create!(:tournament=>t, :player=>bethany_cermak, :place=>11, :bounty_collector=>michelle_heflin, :fee_paid=>true, :update_player_stats=>false)
 
     zach_messer = Player.create!(:first_name=>"Zack", :last_name=>"Messer")
     Result.create!(:tournament=>t, :player=>zach_messer, :place=>10, :bounty_collector=>ryan_johns, :fee_paid=>true, :update_player_stats=>false)
 
-    Result.create!(:tournament=>t, :player=>danny_egelhoff, :place=>9, :bounty_collector=>michelle_unknown, :fee_paid=>true, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>danny_egelhoff, :place=>9, :bounty_collector=>michelle_heflin, :fee_paid=>true, :update_player_stats=>false)
     Result.create!(:tournament=>t, :player=>steve_radulovich, :place=>8, :bounty_collector=>tony_moreno, :fee_paid=>true, :update_player_stats=>false)
     Result.create!(:tournament=>t, :player=>eric_tipton, :place=>7, :bounty_collector=>tony_moreno, :fee_paid=>true, :update_player_stats=>false)
     Result.create!(:tournament=>t, :player=>laura_rody, :place=>6, :bounty_collector=>tony_moreno, :fee_paid=>true, :update_player_stats=>false)
@@ -107,7 +107,7 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>alex_farley, :place=>5, :bounty_collector=>amir_manji, :fee_paid=>true, :update_player_stats=>false)
 
     Result.create!(:tournament=>t, :player=>ryan_johns, :place=>4, :bounty_collector=>tony_moreno, :fee_paid=>true, :update_player_stats=>false)
-    Result.create!(:tournament=>t, :player=>michelle_unknown, :place=>3, :bounty_collector=>amir_manji, :fee_paid=>true, :update_player_stats=>false)
+    Result.create!(:tournament=>t, :player=>michelle_heflin, :place=>3, :bounty_collector=>amir_manji, :fee_paid=>true, :update_player_stats=>false)
     Result.create!(:tournament=>t, :player=>tony_moreno, :place=>2, :bounty_collector=>amir_manji, :fee_paid=>true, :update_player_stats=>false)
     Result.create!(:tournament=>t, :player=>amir_manji, :place=>1, :fee_paid=>true, :update_player_stats=>false)
     
