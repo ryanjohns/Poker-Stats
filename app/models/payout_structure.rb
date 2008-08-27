@@ -1,7 +1,6 @@
 class PayoutStructure < ActiveRecord::Base
   
   has_many :payouts, :dependent=>:destroy
-  #belongs_to :series
   
   attr_reader :series_attr
   attr_reader :series_ids_attr
@@ -30,6 +29,7 @@ class PayoutStructure < ActiveRecord::Base
   end
   
   def series=(val)
+    write_attribute(:series_ids, nil)
     @series_attr = nil
     Array(val).each do |s|
       add_series_id(s.id)
@@ -55,6 +55,7 @@ class PayoutStructure < ActiveRecord::Base
   end
   
   def series_ids=(val)
+    write_attribute(:series_ids, nil)
     Array(val).each do |id|
       add_series_id(id)
     end
