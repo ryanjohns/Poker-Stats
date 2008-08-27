@@ -9,6 +9,14 @@ class Series < ActiveRecord::Base
   def payout_structures
     return @payout_structures_attr if @payout_structures_attr
     @payout_structures_attr = PayoutStructure.find_all_by_series_id(self.id)
+    def @payout_structures_attr.series=(val)
+      @series = val
+    end
+    @payout_structures_attr.series = self
+    def @payout_structures_attr.reload
+      @series.reload.payout_structures
+    end
+    @payout_structures_attr
   end
   
   def destroy
@@ -20,6 +28,11 @@ class Series < ActiveRecord::Base
         ps.save!
       end
     end
+    super
+  end
+  
+  def reload
+    @payout_structures_attr = nil
     super
   end
   

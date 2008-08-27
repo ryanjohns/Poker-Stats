@@ -115,7 +115,6 @@ class FirstThreeTourneyResults < ActiveRecord::Migration
   end
 
   def self.down
-    Series.destroy_all
     Player.destroy_all
   end
 end
