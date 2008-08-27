@@ -144,12 +144,12 @@ class SeasonOneResults < ActiveRecord::Migration
     end
     
     # New Players
-    names1 = "John Grinzivich, Brandon Scoggins, Rich Belsky, Bob Pajich, Micah Thomas, Dave Wilmert, Ryan McGuire, Todd Alexander, Morgan Kise"
-    names2 = "Justin Marchand, Konan Luce, Mary Hurbi, Paul Wilhelm, Michael Friedman, Megan Cork, Randy Watters, Sherry Pinder, Theo Tran"
-    names3 = "Jamie Wilhelm, Seth Niesen, Lara Miller, Mark Pinder, Shannon Watters, Ryan VanWinkle, Alex G(I), Chris Hinkel, Tim M, Dustin Fremion"
-    names4 = "Raphael (I), Alex P(I), Scott M(I), Blake Levario, Chris P(I), Sharad (I), Cameron (I), James B, Ryan Lucchesi, Joe Hulbert"
-    names5 = "Tony DeSylva, Brittany Giacoletto, Ryan C(I), Paola Rodriguez"
-    [names1, names2, names3, names4, names5].join(", ").split(", ").each do |name|
+    names = "John Grinzivich, Brandon Scoggins, Rich Belsky, Bob Pajich, Micah Thomas, Dave Wilmert, Ryan McGuire, Todd Alexander, Morgan Kise" << 
+    ", Justin Marchand, Konan Luce, Mary Hurbi, Paul Wilhelm, Michael Friedman, Megan Cork, Randy Watters, Sherry Pinder, Theo Tran" <<
+    ", Jamie Wilhelm, Seth Niesen, Lara Miller, Mark Pinder, Shannon Watters, Ryan VanWinkle, Alex G(I), Chris Hinkel, Tim M, Dustin Fremion" <<
+    ", Raphael (I), Alex P(I), Scott M(I), Blake Levario, Chris P(I), Sharad (I), Cameron (I), James B, Ryan Lucchesi, Joe Hulbert" <<
+    ", Tony DeSylva, Brittany Giacoletto, Ryan C(I), Paola Rodriguez"
+    names.split(", ").each do |name|
       arr = name.split(" ")
       Player.find_or_create_by_first_name_and_last_name(arr[0], arr[1])
     end
@@ -605,7 +605,7 @@ class SeasonOneResults < ActiveRecord::Migration
     Result.create!(:tournament=>t, :player=>@tony_moreno, :place=>1, :fee_paid=>false, :update_player_stats=>false)
   
     # Week 25
-    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 1, 25), :num_entrants=>15)
+    t = Tournament.create!(:series=>season1, :tournament_date=>Date.new(2008, 1, 23), :num_entrants=>15)
 
     Result.create!(:tournament=>t, :player=>@shawn_green, :place=>15, :bounty_collector=>@justin_marchand, :fee_paid=>false, :update_player_stats=>false)    
     Result.create!(:tournament=>t, :player=>@kristy_arnett, :place=>14, :bounty_collector=>@ronnie_morone, :fee_paid=>false, :update_player_stats=>false)    
