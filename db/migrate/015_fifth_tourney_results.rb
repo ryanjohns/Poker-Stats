@@ -1,4 +1,4 @@
-class FourthTourneyResults < ActiveRecord::Migration
+class FifthTourneyResults < ActiveRecord::Migration
   
   def self.up
     
