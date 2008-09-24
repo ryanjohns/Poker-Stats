@@ -1,0 +1,53 @@
+<% title('Enter Results') %>
+
+<h2>Enter Results</h2>
+
+<% if !flash[:error].blank? %>
+  <%= flash[:error] %>
+<% else %>
+  <h4 style="margin: 0px 0px 5px 0px;">Tournament Date: <%= @tournament.tournament_date.strftime("%b %d, %Y") %></h4>
+  <h4 style="margin: 0px 0px 5px 0px;">Num Players: <%= @tournament.num_entrants %></h4>
+  <h4 style="margin: 0px 0px 25px 0px;">Prize Pool: <%= number_to_currency(@tournament.num_entrants * 25) %></h4>
+  <% form_tag result_entry_url(@tournament.id) do %>
+    <table>
+      <tr>
+        <th>Place</th>
+        <th>Player Eliminated</th>
+        <th>Bounty Collector</th>
+        <th>Fee Paid?</th>
+        <th>&nbsp;</th>
+      </tr>
+      <tr style="text-align: center;">
+        <td><%= text_field_tag('place', '', :size => 4) %></td>
+        <td><%= select_tag('player_id', "<option value=''>Select...</option>" + options_from_collection_for_select(@players, "id", "name")) %></td>
+        <td><%= select_tag('bounty_collector_id', "<option value=''>Select...</option>" + options_from_collection_for_select(@players, "id", "name")) %></td>
+        <td><%= check_box_tag('fee_paid') %></td>
+        <td><%= submit_tag('Enter Result', :onclick => "return validate_result_entry_form();") %></td>
+      </tr>
+    </table>
+  <% end %>
+  
+  <hr style="width: 60%; text-align: left; margin: 15px 0;" />
+  
+  <table>
+    <tr>
+      <th colspan="5">Current Results</th>
+    </tr>
+    <tr>
+      <th>Place</th>
+      <th>Player Eliminated</th>
+      <th>Bounty Collector</th>
+      <th>Fee Paid?</th>
+      <th>Money Won</th>
+    </tr>
+    <% Result.find_all_by_tournament_id(@tournament.id, :order => "id desc").each do |result| %>
+      <tr style="text-align: center;">
+        <td><%= result.payout.place.ordinalize %></td>
+        <td><%= result.player.name %></td>
+        <td><%= result.bounty_collector.name rescue "" %></td>
+        <td><%= result.fee_paid? ? 'Yes' : 'No' %></td>
+        <td><%= number_to_currency result.money_won %></td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

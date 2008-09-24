@@ -7,8 +7,8 @@
 
 <h2><%= @tournament.series.name %>: <%= @tournament.tournament_date.strftime "%B %e, %Y" %></h2>
 <div class='div_stats'>
-	Entrants: <%= @results.nitems %><br/>
-	Total prize pool: <%= number_to_currency @results.sum { |result| result.money_won }%><br/>
+	Entrants: <%= @tournament.num_entrants %><br/>
+	Total prize pool: <%= number_to_currency(@tournament.num_entrants * 25) %><br/>
 </div>
 <br/>
 <div class='div_results'>

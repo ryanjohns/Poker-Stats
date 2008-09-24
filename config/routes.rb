@@ -15,6 +15,12 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect '', :controller => 'series', :action => 'current'
 
+  map.edit_player 'edit-player/:id', :controller => 'player', :action => 'edit', :id => nil
+
+  map.start_tournament 'start-tournament', :controller => 'tournament', :action => 'start_tournament'
+
+  map.result_entry 'enter-result/:id', :controller => 'result', :action => 'enter_result', :id => nil
+
   # Allow downloading Web Service WSDL as a file with an extension
   # instead of a file named 'wsdl'
   map.connect ':controller/service.wsdl', :action => 'wsdl'

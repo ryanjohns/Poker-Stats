@@ -1,0 +1,23 @@
+<% title('Start Tournament') %>
+
+<h2>Start Tournament</h2>
+<% form_tag start_tournament_url do %>
+  <table>
+    <tr>
+      <td>Series:</td>
+      <td><%= select_tag('series_id', options_from_collection_for_select(@series, "id", "name")) %></td>
+    </tr>
+    <tr>
+      <td>Num Players:</td>
+      <td><%= text_field_tag('num_entrants', '', :size => 4) %></td>
+    </tr>
+    <tr>
+      <td>Date:</td>
+      <td><%= date_select("date", "start", :order => [:month, :day, :year]) %></td>
+    </td>
+    <tr><td colspan="2">&nbsp;</td></tr>
+    <tr>
+      <td colspan="2"><%= submit_tag('Create Tournament', :onclick => "return validate_start_tournament_form();") %></td>
+    </tr>
+  </table>
+<% end %>
