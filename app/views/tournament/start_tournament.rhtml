@@ -14,7 +14,7 @@
     <tr>
       <td>Date:</td>
       <td><%= date_select("date", "start", :order => [:month, :day, :year]) %></td>
-    </td>
+    </tr>
     <tr><td colspan="2">&nbsp;</td></tr>
     <tr>
       <td colspan="2"><%= submit_tag('Create Tournament', :onclick => "return validate_start_tournament_form();") %></td>
