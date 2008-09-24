@@ -8,7 +8,7 @@
   <h4 style="margin: 0px 0px 5px 0px;">Tournament Date: <%= @tournament.tournament_date.strftime("%b %d, %Y") %></h4>
   <h4 style="margin: 0px 0px 5px 0px;">Num Players: <%= @tournament.num_entrants %></h4>
   <h4 style="margin: 0px 0px 25px 0px;">Prize Pool: <%= number_to_currency(@tournament.num_entrants * 25) %></h4>
-  <% form_tag result_entry_url(@tournament.id) do %>
+  <% form_tag result_entry_url(@tournament.id), :name => 'result_entry_form' do %>
     <table>
       <tr>
         <th>Place</th>
