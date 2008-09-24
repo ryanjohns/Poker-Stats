@@ -14,4 +14,9 @@ class ResultController < ApplicationController
       redirect_to :controller => 'tournament', :action => 'view', :id => @tournament.id if bounty_collector.nil?
     end
   end
+  
+  def get_fees_paid_for_player
+    stats = PlayerStat.find_by_player_id_and_series_id(params[:player_id].to_i, params[:series_id].to_i)
+    render :text => (stats.num_fees.to_s rescue '0')
+  end
 end

@@ -8,7 +8,7 @@
   <h4 style="margin: 0px 0px 5px 0px;">Tournament Date: <%= @tournament.tournament_date.strftime("%b %d, %Y") %></h4>
   <h4 style="margin: 0px 0px 5px 0px;">Num Players: <%= @tournament.num_entrants %></h4>
   <h4 style="margin: 0px 0px 25px 0px;">Prize Pool: <%= number_to_currency(@tournament.num_entrants * 25) %></h4>
-  <% form_tag result_entry_url(@tournament.id), :name => 'result_entry_form' do %>
+  <% form_tag result_entry_url(@tournament.id) do %>
     <table>
       <tr>
         <th>Place</th>
@@ -19,9 +19,9 @@
       </tr>
       <tr style="text-align: center;">
         <td><%= text_field_tag('place', '', :size => 4) %></td>
-        <td><%= select_tag('player_id', "<option value=''>Select...</option>" + options_from_collection_for_select(@players, "id", "name")) %></td>
+        <td><%= select_tag('player_id', "<option value=''>Select...</option>" + options_from_collection_for_select(@players, "id", "name"), :onchange => "update_fee_paid(this.value, #{@tournament.series.id});") %></td>
         <td><%= select_tag('bounty_collector_id', "<option value=''>Select...</option>" + options_from_collection_for_select(@players, "id", "name")) %></td>
-        <td><%= check_box_tag('fee_paid') %></td>
+        <td><%= check_box_tag('fee_paid', '1', true) %></td>
         <td><%= submit_tag('Enter Result', :onclick => "return validate_result_entry_form();") %></td>
       </tr>
     </table>
