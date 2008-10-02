@@ -39,6 +39,7 @@
       <th>Bounty Collector</th>
       <th>Fee Paid?</th>
       <th>Money Won</th>
+      <th>Points Earned</th>
     </tr>
     <% Result.find_all_by_tournament_id(@tournament.id, :order => "id desc").each do |result| %>
       <tr style="text-align: center;">
@@ -47,6 +48,7 @@
         <td><%= result.bounty_collector.name rescue "" %></td>
         <td><%= result.fee_paid? ? 'Yes' : 'No' %></td>
         <td><%= number_to_currency result.money_won %></td>
+        <td><%= result.payout.points %></td>
       </tr>
     <% end %>
   </table>
