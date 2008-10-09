@@ -21,7 +21,7 @@
         <th>&nbsp;</th>
       </tr>
       <tr style="text-align: center;">
-        <td><%= text_field_tag('place', @current_results.first.payout.place - 1, :size => 4) %></td>
+        <td><%= text_field_tag('place', (Result.find_by_tournament_id(@tournament.id, :order => "id desc").payout.place rescue @tournament.num_entrants + 1) - 1, :size => 4) %></td>
         <td><%= select_tag('player_id', "<option value=''>Select...</option>" + options_from_collection_for_select(@players, "id", "name"), :onchange => "update_fee_paid(this.value, #{@tournament.series.id});") %></td>
         <td><%= select_tag('bounty_collector_id', "<option value=''>Select...</option>" + options_from_collection_for_select(@players, "id", "name")) %></td>
         <td><%= check_box_tag('fee_paid', '1', true) %></td>
@@ -44,7 +44,7 @@
       <th>Money Won</th>
       <th>Points Earned</th>
     </tr>
-    <% @current_results.each do |result| %>
+    <% Result.find_all_by_tournament_id(@tournament.id, :order => "id desc").each do |result| %>
       <tr style="text-align: center;">
         <td><%= result.payout.place.ordinalize %></td>
         <td><%= result.player.name %></td>
