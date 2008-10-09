@@ -12,7 +12,8 @@ class ResultController < ApplicationController
       bounty_collector = Player.find_by_id(params[:bounty_collector_id].to_i)
       fee_paid = (params[:fee_paid] == "1" ? true : false)
       Result.create!(:tournament => @tournament, :player => player, :bounty_collector => bounty_collector, :fee_paid => fee_paid, :place => params[:place].to_i, :update_player_stats => true)
-      redirect_to :controller => 'tournament', :action => 'view', :id => @tournament.id if bounty_collector.nil?
+      redirect_to :controller => 'tournament', :action => 'view', :id => @tournament.id and return if bounty_collector.nil?
+      @current_results = Result.find_all_by_tournament_id(@tournament.id, :order => "id desc")
     end
   end
   

@@ -7,7 +7,10 @@
 <% else %>
   <h4 style="margin: 0px 0px 5px 0px;">Tournament Date: <%= @tournament.tournament_date.strftime("%b %d, %Y") %></h4>
   <h4 style="margin: 0px 0px 5px 0px;">Num Players: <%= @tournament.num_entrants %></h4>
-  <h4 style="margin: 0px 0px 25px 0px;">Prize Pool: <%= number_to_currency(@tournament.num_entrants * 25) %></h4>
+  <h4 style="margin: 0px 0px 5px 0px;">Prize Pool: <%= number_to_currency(@tournament.num_entrants * 25) %></h4>
+  <h4 style="margin: 0px 0px 5px 0px;">1st: ~<%= number_to_currency(@tournament.num_entrants * 25 * 0.5) %></h4>
+  <h4 style="margin: 0px 0px 5px 0px;">2nd: ~<%= number_to_currency(@tournament.num_entrants * 25 * 0.3) %></h4>
+  <h4 style="margin: 0px 0px 25px 0px;">3rd: ~<%= number_to_currency(@tournament.num_entrants * 25 * 0.2) %></h4>
   <% form_tag result_entry_url(@tournament.id) do %>
     <table>
       <tr>
@@ -31,7 +34,7 @@
   
   <table>
     <tr>
-      <th colspan="5">Current Results</th>
+      <th colspan="6">Current Results</th>
     </tr>
     <tr>
       <th>Place</th>
