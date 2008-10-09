@@ -6,6 +6,7 @@ class ResultController < ApplicationController
     flash.now[:error] = "You must give a valid tournament_id" and return if @tournament.nil?
     flash.now[:error] = "Tournament is complete" and return if @tournament.num_entrants == Result.find_all_by_tournament_id(@tournament.id).size
     @players = Player.find(:all, :order => 'last_name asc')
+    @current_results = Result.find_all_by_tournament_id(@tournament.id, :order => "id desc")
     if request.post?
       player = Player.find_by_id(params[:player_id].to_i)
       bounty_collector = Player.find_by_id(params[:bounty_collector_id].to_i)
