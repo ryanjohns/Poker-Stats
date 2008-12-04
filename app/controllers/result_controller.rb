@@ -4,7 +4,7 @@ class ResultController < ApplicationController
     flash.now[:error] = "You must give a tournament_id" and return if params[:id].blank?
     @tournament = Tournament.find_by_id(params[:id].to_i)
     flash.now[:error] = "You must give a valid tournament_id" and return if @tournament.nil?
-    flash.now[:error] = "Tournament is complete" and return if @tournament.num_entrants == Result.find_all_by_tournament_id(@tournament.id).size
+    redirect_to(:controller => 'tournament', :action => 'view', :id => @tournament.id) if @tournament.num_entrants == Result.find_all_by_tournament_id(@tournament.id).size
     @players = Player.find(:all, :order => 'last_name asc')
     if request.post?
       player = Player.find_by_id(params[:player_id].to_i)

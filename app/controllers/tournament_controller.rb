@@ -1,21 +1,20 @@
 class TournamentController < ApplicationController
-  
+
   def index
     @series = Series.find(:all, :order => 'start_date DESC')
-    
+
     @tournaments = []
     @series.each do |series|
-      @tournaments[series.id] = Tournament.find_all_by_series_id(series.id, :order => 'tournament_date DESC')
+      @tournaments[series.id] = Tournament.find_all_by_series_id(series.id, :order => 'tournament_date ASC')
     end
-    
   end
-  
+
   def view
     redirect_to :action => 'index' and return unless @tournament = Tournament.find(params[:id]) rescue false
     @results = Result.find_all_by_tournament_id(params[:id], :order => 'payout_id ASC')
-    @results.sort { |a,b| a.payout.place  <=> b.payout.place }
+    @results.sort { |a,b| a.payout.place <=> b.payout.place }
   end
-  
+
   def start_tournament
     @series = Series.find(:all, :order => "start_date desc")
     if request.post?
@@ -25,4 +24,5 @@ class TournamentController < ApplicationController
       redirect_to result_entry_url(t)
     end
   end
+
 end
