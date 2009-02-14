@@ -1,12 +1,26 @@
 <% title('Players') %>
 
-<%= link_to 'Create Player', {:action => 'edit'} %>
+<%= link_to 'Create Player', edit_player_url %>
 
-<ol>
-  <% @players.each do |player| %>
-    <li>
-      <%= player.name %>
-      <%= link_to '[edit]', {:action => 'edit', :id => player} %>
-    </li>
-  <% end %>
-</ol>
+<br /><br />
+
+<div class='div_results'>
+  <table class='table_results'>
+		<tr>
+		  <th></th>
+			<th>Name</th>
+			<th>Email Address</th>
+			<th>&nbsp;</th>
+		</tr>
+
+    <% @players.each_index do |i| %>
+      <% player = @players[i] %>
+      <tr class="<%= cycle('even', 'odd') %>">
+        <td><%= i + 1 %>.</td>
+        <td class='name-column'><%= player.name %></td>
+        <td><%= player.email.gsub("@", "(at)") rescue nil %></td>
+        <td><%= link_to '[edit]', edit_player_url(player) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
