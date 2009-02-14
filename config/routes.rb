@@ -15,6 +15,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.connect '', :controller => 'series', :action => 'current'
 
+  map.view_players 'players', :controller => 'player', :action => 'index'
+
   map.edit_player 'edit-player/:id', :controller => 'player', :action => 'edit', :id => nil
 
   map.start_tournament 'start-tournament', :controller => 'tournament', :action => 'start_tournament'
